@@ -6,7 +6,7 @@
 
 <meta name="description" content="Arpit Srivastava — Social Development Professional, Child Protection, Government Systems Strengthening, Training, Data & Evidence.">
 
-<title>Arpit Srivastava | Child Protection & Social Development Professional</title>
+<title>Arpit Srivastava | Social Development Professional</title>
 
 <style>
 :root{
@@ -19,8 +19,13 @@
   --line:rgba(255,255,255,.10);
 }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
@@ -30,12 +35,17 @@ body{
   line-height:1.6;
 }
 
-a{color:inherit;text-decoration:none}
+a{
+  color:inherit;
+  text-decoration:none;
+}
 
 .container{
   width:min(1160px,92%);
   margin:auto;
 }
+
+/* NAVIGATION */
 
 nav{
   position:fixed;
@@ -43,7 +53,7 @@ nav{
   left:0;
   right:0;
   z-index:100;
-  background:rgba(11,13,15,.95);
+  background:rgba(11,13,15,.96);
   backdrop-filter:blur(14px);
   border-bottom:1px solid var(--line);
 }
@@ -60,7 +70,9 @@ nav{
   letter-spacing:2px;
 }
 
-.brand span{color:var(--gold)}
+.brand span{
+  color:var(--gold);
+}
 
 .nav-links{
   display:flex;
@@ -69,89 +81,19 @@ nav{
   color:#ddd;
 }
 
-.nav-links a:hover{color:var(--gold2)}
-
-section{padding:90px 0}
-
-.hero{
-  min-height:100vh;
-  display:grid;
-  place-items:center;
-  padding:110px 0 60px;
-  background:
-    radial-gradient(circle at 75% 40%,rgba(217,164,65,.20),transparent 35%),
-    linear-gradient(135deg,#07090b,#17120c 60%,#090b0d);
-}
-
-.hero-content{
-  max-width:900px;
-  text-align:center;
-  margin:auto;
-}
-
-.kicker{
+.nav-links a:hover{
   color:var(--gold2);
-  font-size:13px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  font-weight:700;
 }
 
-h1{
-  font-size:clamp(48px,7vw,88px);
-  line-height:.95;
-  margin:18px 0 22px;
-  letter-spacing:-3px;
+/* GENERAL */
+
+section{
+  padding:90px 0;
 }
 
-h1 span{color:var(--gold)}
-
-.hero-title{
-  font-size:22px;
-  color:#eee;
+.section-head{
+  margin-bottom:38px;
 }
-
-.hero-copy{
-  color:var(--muted);
-  max-width:800px;
-  margin:22px auto;
-}
-
-.buttons{
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:28px;
-}
-
-.btn{
-  display:inline-block;
-  padding:13px 20px;
-  border-radius:5px;
-  border:1px solid var(--gold);
-  font-weight:700;
-  cursor:pointer;
-}
-
-.btn.primary{
-  background:var(--gold);
-  color:#111;
-}
-
-.btn.secondary{background:transparent}
-
-.whatsapp-btn{
-  border-color:#25D366;
-  color:#25D366;
-}
-
-.whatsapp-btn:hover{
-  background:#25D366;
-  color:#111;
-}
-
-.section-head{margin-bottom:38px}
 
 .eyebrow{
   font-size:12px;
@@ -172,28 +114,132 @@ h2{
   max-width:950px;
 }
 
-.cards{
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:110px 0 70px;
+
+  background:
+    radial-gradient(
+      circle at 75% 40%,
+      rgba(217,164,65,.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #07090b,
+      #17120c 60%,
+      #090b0d
+    );
+}
+
+.hero-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+  grid-template-columns:1.05fr .75fr;
+  gap:55px;
+  align-items:center;
 }
 
-.card{
-  background:linear-gradient(145deg,#151a1e,#0f1215);
-  border:1px solid var(--line);
-  padding:25px;
-  border-radius:8px;
+.hero-content{
+  max-width:720px;
 }
 
-.card h3{
-  margin-top:0;
-  color:#fff;
+.kicker{
+  color:var(--gold2);
+  font-size:13px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-weight:700;
 }
 
-.card p,
-.card li{
+h1{
+  font-size:clamp(48px,7vw,88px);
+  line-height:.95;
+  margin:18px 0 22px;
+  letter-spacing:-3px;
+}
+
+h1 span{
+  color:var(--gold);
+}
+
+.hero-title{
+  font-size:21px;
+  color:#eee;
+}
+
+.hero-copy{
   color:var(--muted);
+  max-width:720px;
+  margin:22px 0;
 }
+
+/* PROFILE IMAGE */
+
+.profile{
+  width:min(100%,450px);
+  margin:auto;
+}
+
+.profile img{
+  width:100%;
+  display:block;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 30px 80px rgba(0,0,0,.55);
+}
+
+/* BUTTONS */
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 20px;
+  border-radius:5px;
+  border:1px solid var(--gold);
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.btn.primary{
+  background:var(--gold);
+  color:#111;
+}
+
+.btn.primary:hover{
+  background:var(--gold2);
+}
+
+.btn.secondary{
+  background:transparent;
+}
+
+.btn.secondary:hover{
+  background:var(--gold);
+  color:#111;
+}
+
+.whatsapp-btn{
+  border-color:#25D366;
+  color:#25D366;
+}
+
+.whatsapp-btn:hover{
+  background:#25D366;
+  color:#111;
+}
+
+/* IMPACT */
 
 .impact-strip{
   display:grid;
@@ -222,20 +268,31 @@ h2{
   text-transform:uppercase;
 }
 
-.tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:9px;
+/* CARDS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
 
-.tag{
-  padding:9px 12px;
+.card{
+  background:linear-gradient(145deg,#151a1e,#0f1215);
   border:1px solid var(--line);
-  border-radius:4px;
-  color:#ddd;
-  background:#111518;
-  font-size:13px;
+  padding:25px;
+  border-radius:8px;
 }
+
+.card h3{
+  margin-top:0;
+  color:#fff;
+}
+
+.card p{
+  color:var(--muted);
+}
+
+/* RESOURCES */
 
 .resources-grid{
   display:grid;
@@ -275,6 +332,8 @@ h2{
   margin-bottom:8px;
 }
 
+/* CONTACT */
+
 .contact{
   background:linear-gradient(135deg,#17120a,#0f1417);
 }
@@ -288,11 +347,15 @@ h2{
 
 .contact-details{
   display:grid;
-  gap:10px;
+  gap:15px;
   color:#ddd;
 }
 
-.contact-details strong{color:var(--gold2)}
+.contact-details strong{
+  color:var(--gold2);
+}
+
+/* FOOTER */
 
 footer{
   padding:28px 0;
@@ -302,25 +365,59 @@ footer{
   text-align:center;
 }
 
+/* MOBILE */
+
 @media(max-width:850px){
-  .nav-links{display:none}
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero-content{
+    max-width:850px;
+    margin:auto;
+  }
+
+  .buttons{
+    justify-content:center;
+  }
+
+  .profile{
+    max-width:520px;
+  }
+
+  .cards,
+  .resources-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .impact-strip{
+    grid-template-columns:1fr 1fr;
+  }
 
   .contact-box{
     grid-template-columns:1fr;
   }
-
-  .cards,
-  .resources-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .impact-strip{
-    grid-template-columns:1fr 1fr;
-  }
 }
 
 @media(max-width:560px){
-  section{padding:65px 0}
+
+  section{
+    padding:65px 0;
+  }
+
+  h1{
+    letter-spacing:-2px;
+  }
+
+  .hero-title{
+    font-size:18px;
+  }
 
   .cards,
   .resources-grid{
@@ -331,439 +428,618 @@ footer{
     grid-template-columns:1fr 1fr;
   }
 
-  h1{letter-spacing:-2px}
-
-  .hero-title{font-size:18px}
+  .profile{
+    width:100%;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
-<div class="container nav-inner">
+  <div class="container nav-inner">
 
-<a class="brand" href="#top">
-ARPIT <span>SRIVASTAVA</span>
-</a>
+    <a class="brand" href="#top">
+      ARPIT <span>SRIVASTAVA</span>
+    </a>
 
-<div class="nav-links">
-<a href="#about">About Me</a>
-<a href="#expertise">Expertise</a>
-<a href="#committees">Committees</a>
-<a href="#resources">Resources</a>
-<a href="#contact">Contact</a>
-</div>
+    <div class="nav-links">
+      <a href="#about">About Me</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#committees">Committees</a>
+      <a href="#resources">Resources</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-</div>
+  </div>
 </nav>
 
 
+<!-- HERO -->
+
 <header class="hero" id="top">
-<div class="container">
 
-<div class="hero-content">
+  <div class="container hero-grid">
 
-<div class="kicker">
-10+ Years of Experience • Social Development • Child Protection • Governance
-</div>
+    <div class="hero-content">
 
-<h1>
-Arpit <span>Srivastava</span>
-</h1>
+      <div class="kicker">
+        10+ Years of Experience • Social Development • Child Protection • Governance
+      </div>
 
-<div class="hero-title">
-Social Development Professional | Child Protection |
-Programme Management | Government Systems Strengthening |
-GPDP & Panchayati Raj | Data & Evidence
-</div>
+      <h1>
+        Arpit <span>Srivastava</span>
+      </h1>
 
-<p class="hero-copy">
-Focused on child protection, child rights, programme management,
-capacity building, government systems strengthening, data management,
-monitoring and evidence-based programme planning.
-</p>
+      <div class="hero-title">
+        Social Development Professional | Child Protection |
+        Programme Management | Government Systems Strengthening |
+        GPDP & Panchayati Raj | Data & Evidence
+      </div>
 
-<p>
-<strong>500+ trainings</strong> •
-<strong>10,000+ people trained</strong> •
-<strong>100+ government circulars</strong> •
-<strong>GPDP & PAI Master Trainer</strong>
-</p>
+      <p class="hero-copy">
+        Focused on child protection, child rights, programme management,
+        capacity building, government systems strengthening, data management,
+        monitoring and evidence-based programme planning.
+      </p>
 
-<div class="buttons">
+      <p>
+        <strong>500+ trainings</strong> •
+        <strong>10,000+ people trained</strong> •
+        <strong>100+ government circulars</strong> •
+        <strong>GPDP & PAI Master Trainer</strong>
+      </p>
 
-<a class="btn secondary"
-href="mailto:srivastavaarpit928@gmail.com">
-Get in Touch
-</a>
+      <div class="buttons">
 
-<a class="btn whatsapp-btn"
-href="https://wa.me/919005841098?text=Hello%20Arpit%20Srivastava"
-target="_blank">
-WhatsApp
-</a>
+        <a
+          class="btn secondary"
+          href="mailto:srivastavaarpit928@gmail.com">
+          Get in Touch
+        </a>
 
-</div>
+        <a
+          class="btn whatsapp-btn"
+          href="https://wa.me/919005841098?text=Hello%20Arpit%20Srivastava"
+          target="_blank"
+          rel="noopener">
+          WhatsApp
+        </a>
 
-</div>
-</div>
+      </div>
+
+    </div>
+
+
+    <!-- PROFILE PHOTO -->
+
+    <div class="profile">
+      <img
+        src="profile.jpg"
+        alt="Arpit Srivastava">
+    </div>
+
+  </div>
+
 </header>
 
 
+<!-- ABOUT -->
+
 <section id="about">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-head">
+    <div class="section-head">
 
-<div class="eyebrow">About Me</div>
+      <div class="eyebrow">
+        About Me
+      </div>
 
-<h2>Arpit Srivastava</h2>
+      <h2>
+        Arpit Srivastava
+      </h2>
 
-<p class="lead">
-<strong>10+ Years of Experience</strong> •
-Social Development • Child Protection •
-Government Systems Strengthening • Training •
-Data & Evidence
-</p>
+      <p class="lead">
+        <strong>10+ Years of Experience</strong> •
+        Social Development • Child Protection •
+        Government Systems Strengthening • Training •
+        Data & Evidence
+      </p>
 
-<p class="lead">
-I am a Social Development Professional with
-<strong>10+ years of professional experience</strong>
-working across child protection, child rights,
-government systems strengthening, programme management,
-training, capacity building, data management and
-evidence-based programme planning.
-</p>
+      <p class="lead">
+        I am a Social Development Professional with
+        <strong>10+ years of professional experience</strong>
+        working across child protection, child rights,
+        government systems strengthening, programme management,
+        training, capacity building, data management and
+        evidence-based programme planning.
+      </p>
 
-<p class="lead">
-I work closely with government functionaries,
-frontline workers, community institutions and other
-stakeholders to strengthen systems, improve coordination
-and support effective implementation.
-</p>
+      <p class="lead">
+        I work closely with government functionaries,
+        frontline workers, community institutions and other
+        stakeholders to strengthen systems, improve coordination
+        and support effective implementation.
+      </p>
 
-</div>
+    </div>
 
-<div class="impact-strip">
 
-<div class="impact-stat">
-<strong>10+</strong>
-<span>Years Experience</span>
-</div>
+    <div class="impact-strip">
 
-<div class="impact-stat">
-<strong>500+</strong>
-<span>Trainings Delivered</span>
-</div>
+      <div class="impact-stat">
+        <strong>10+</strong>
+        <span>Years Experience</span>
+      </div>
 
-<div class="impact-stat">
-<strong>10,000+</strong>
-<span>People Trained</span>
-</div>
+      <div class="impact-stat">
+        <strong>500+</strong>
+        <span>Trainings Delivered</span>
+      </div>
 
-<div class="impact-stat">
-<strong>100+</strong>
-<span>Government Circulars</span>
-</div>
+      <div class="impact-stat">
+        <strong>10,000+</strong>
+        <span>People Trained</span>
+      </div>
 
-</div>
+      <div class="impact-stat">
+        <strong>100+</strong>
+        <span>Government Circulars</span>
+      </div>
 
-</div>
+    </div>
+
+  </div>
 
 </section>
 
+
+<!-- EXPERTISE -->
 
 <section id="expertise">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-head">
-<div class="eyebrow">Expertise</div>
-<h2>Areas of Expertise</h2>
-</div>
+    <div class="section-head">
 
-<div class="cards">
+      <div class="eyebrow">
+        Expertise
+      </div>
 
-<div class="card">
-<h3>Child Protection & Rights</h3>
-<p>
-Child protection systems, prevention-based approaches,
-risk identification, referral, community monitoring
-and convergence with government schemes and services.
-</p>
-</div>
+      <h2>
+        Areas of Expertise
+      </h2>
 
-<div class="card">
-<h3>Government Systems & Convergence</h3>
-<p>
-Strengthening coordination between village, block and
-district-level systems with focus on child protection,
-reporting, review mechanisms and departmental convergence.
-</p>
-</div>
+    </div>
 
-<div class="card">
-<h3>Training & Capacity Building</h3>
-<p>
-Design and facilitation of capacity-building processes
-for government functionaries, frontline workers,
-community representatives and stakeholders.
-</p>
-</div>
 
-<div class="card">
-<h3>Data, MIS & Evidence</h3>
-<p>
-Programme data, MIS, monitoring frameworks, reporting
-systems and evidence-based analysis for planning and
-decision-making.
-</p>
-</div>
+    <div class="cards">
 
-<div class="card">
-<h3>GPDP & PAI Master Trainer</h3>
-<p>
-Experience in training, facilitation, government
-coordination and field-level capacity building.
-</p>
-</div>
+      <div class="card">
+        <h3>Child Protection & Rights</h3>
+        <p>
+          Child protection systems, prevention-based approaches,
+          risk identification, referral, community monitoring
+          and convergence with government schemes and services.
+        </p>
+      </div>
 
-<div class="card">
-<h3>Programme Management</h3>
-<p>
-Programme planning, monitoring, coordination,
-documentation, reporting and evidence-based
-programme implementation.
-</p>
-</div>
 
-</div>
+      <div class="card">
+        <h3>Government Systems & Convergence</h3>
+        <p>
+          Strengthening coordination between village, block and
+          district-level systems with focus on child protection,
+          reporting, review mechanisms and departmental convergence.
+        </p>
+      </div>
 
-</div>
+
+      <div class="card">
+        <h3>Training & Capacity Building</h3>
+        <p>
+          Design and facilitation of capacity-building processes
+          for government functionaries, frontline workers,
+          community representatives and stakeholders.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>Data, MIS & Evidence</h3>
+        <p>
+          Programme data, MIS, monitoring frameworks, reporting
+          systems and evidence-based analysis for planning and
+          decision-making.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>GPDP & PAI Master Trainer</h3>
+        <p>
+          Experience in training, facilitation, government
+          coordination and field-level capacity building.
+        </p>
+      </div>
+
+
+      <div class="card">
+        <h3>Programme Management</h3>
+        <p>
+          Programme planning, monitoring, coordination,
+          documentation, reporting and evidence-based
+          programme implementation.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
+
+<!-- COMMITTEES -->
 
 <section id="committees">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-head">
+    <div class="section-head">
 
-<div class="eyebrow">Government Committees</div>
+      <div class="eyebrow">
+        Government Committees
+      </div>
 
-<h2>Government Committees & Task Forces</h2>
+      <h2>
+        Government Committees & Task Forces
+      </h2>
 
-<p class="lead">
-Member of government-led committees and task forces
-working on social protection, child rights, child
-protection and workplace-related issues.
-</p>
+      <p class="lead">
+        Member of government-led committees and task forces
+        working on social protection, child rights, child
+        protection and workplace-related issues.
+      </p>
 
-</div>
+    </div>
 
-<div class="cards">
 
-<div class="card">
-<h3>Task Force – Child Labour</h3>
-<p>
-Member of the government task force working on
-child labour prevention, identification, protection
-and rehabilitation.
-</p>
-</div>
+    <div class="cards">
 
-<div class="card">
-<h3>Task Force – Child Marriage</h3>
-<p>
-Member of the government task force working towards
-prevention of child marriage, community awareness,
-coordination and child protection.
-</p>
-</div>
+      <div class="card">
 
-<div class="card">
-<h3>Vishakha Samiti</h3>
-<p>
-Member of the Vishakha Samiti, contributing to a safe,
-respectful and supportive working environment and
-related institutional processes.
-</p>
-</div>
+        <h3>
+          Task Force – Child Labour
+        </h3>
 
-</div>
+        <p>
+          Member of the government task force working on
+          child labour prevention, identification, protection
+          and rehabilitation.
+        </p>
 
-</div>
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Task Force – Child Marriage
+        </h3>
+
+        <p>
+          Member of the government task force working towards
+          prevention of child marriage, community awareness,
+          coordination and child protection.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Vishakha Samiti
+        </h3>
+
+        <p>
+          Member of the Vishakha Samiti, contributing to a safe,
+          respectful and supportive working environment and
+          related institutional processes.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
+
+<!-- RESOURCES -->
 
 <section id="resources">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-head">
+    <div class="section-head">
 
-<div class="eyebrow">Resources</div>
+      <div class="eyebrow">
+        Resources
+      </div>
 
-<h2>Documents & Resources</h2>
+      <h2>
+        Documents & Resources
+      </h2>
 
-<p class="lead">
-Click any document below to open the complete PDF
-directly from the website in a new tab.
-</p>
+      <p class="lead">
+        Click any document below to open the complete PDF
+        directly from the website in a new tab.
+      </p>
 
-</div>
-
-<div class="resources-grid">
-
-
-<div class="resource-card">
-<div class="resource-label">PDF Resource</div>
-<h3>KAWACH Module</h3>
-<p>KAWACH training/module document.</p>
-<a class="btn primary"
-href="resources/Kawach%20Madule.pdf"
-target="_blank">
-Open PDF
-</a>
-</div>
+    </div>
 
 
-<div class="resource-card">
-<div class="resource-label">PDF Resource</div>
-<h3>SHG Module</h3>
-<p>Self Help Group module.</p>
-<a class="btn primary"
-href="resources/SHG%20Module.pdf"
-target="_blank">
-Open PDF
-</a>
-</div>
+    <div class="resources-grid">
 
 
-<div class="resource-card">
-<div class="resource-label">PDF Resource</div>
-<h3>Bal Sanrakshan</h3>
-<p>Bal Sanrakshan resource document.</p>
-<a class="btn primary"
-href="resources/Bal%20sanrakshan%2010-03-2026%20%281%29.pdf"
-target="_blank">
-Open PDF
-</a>
-</div>
+      <!-- KAWACH -->
+
+      <div class="resource-card">
+
+        <div class="resource-label">
+          PDF Resource
+        </div>
+
+        <h3>
+          KAWACH Module
+        </h3>
+
+        <p>
+          KAWACH training/module document.
+        </p>
+
+        <a
+          class="btn primary"
+          href="resources/Kawach%20Madule.pdf"
+          target="_blank"
+          rel="noopener">
+          Open PDF
+        </a>
+
+      </div>
 
 
-<div class="resource-card">
-<div class="resource-label">PDF Resource</div>
-<h3>Yojana Module</h3>
-<p>Yojana module resource document.</p>
-<a class="btn primary"
-href="resources/Yojana%20Module%2004-26.pdf"
-target="_blank">
-Open PDF
-</a>
-</div>
+      <!-- SHG -->
+
+      <div class="resource-card">
+
+        <div class="resource-label">
+          PDF Resource
+        </div>
+
+        <h3>
+          SHG Module
+        </h3>
+
+        <p>
+          Self Help Group module.
+        </p>
+
+        <a
+          class="btn primary"
+          href="resources/SHG%20Module.pdf"
+          target="_blank"
+          rel="noopener">
+          Open PDF
+        </a>
+
+      </div>
 
 
-<div class="resource-card">
-<div class="resource-label">PDF Resource</div>
-<h3>Meena Manch Module</h3>
-<p>Meena Manch training and resource module.</p>
-<a class="btn primary"
-href="resources/Meena%20munch%20module.pdf"
-target="_blank">
-Open PDF
-</a>
-</div>
+      <!-- BAL SANRAKSHAN -->
+
+      <div class="resource-card">
+
+        <div class="resource-label">
+          PDF Resource
+        </div>
+
+        <h3>
+          Bal Sanrakshan
+        </h3>
+
+        <p>
+          Bal Sanrakshan resource document.
+        </p>
+
+        <a
+          class="btn primary"
+          href="resources/Bal%20sanrakshan%2010-03-2026%20%281%29.pdf"
+          target="_blank"
+          rel="noopener">
+          Open PDF
+        </a>
+
+      </div>
 
 
-<div class="resource-card">
-<div class="resource-label">PDF Resource</div>
-<h3>CWPC Strengthening & Activation</h3>
-<p>Process document for CWPC strengthening and activation.</p>
-<a class="btn primary"
-href="resources/CWPC%20Strengthening%20and%20Activation%20Process%20Document.pdf"
-target="_blank">
-Open PDF
-</a>
-</div>
+      <!-- YOJANA -->
+
+      <div class="resource-card">
+
+        <div class="resource-label">
+          PDF Resource
+        </div>
+
+        <h3>
+          Yojana Module
+        </h3>
+
+        <p>
+          Yojana module resource document.
+        </p>
+
+        <a
+          class="btn primary"
+          href="resources/Yojana%20Module%2004-26.pdf"
+          target="_blank"
+          rel="noopener">
+          Open PDF
+        </a>
+
+      </div>
 
 
-</div>
+      <!-- MEENA MANCH -->
 
-</div>
+      <div class="resource-card">
+
+        <div class="resource-label">
+          PDF Resource
+        </div>
+
+        <h3>
+          Meena Manch Module
+        </h3>
+
+        <p>
+          Meena Manch training and resource module.
+        </p>
+
+        <a
+          class="btn primary"
+          href="resources/Meena%20munch%20module.pdf"
+          target="_blank"
+          rel="noopener">
+          Open PDF
+        </a>
+
+      </div>
+
+
+      <!-- CWPC -->
+
+      <div class="resource-card">
+
+        <div class="resource-label">
+          PDF Resource
+        </div>
+
+        <h3>
+          CWPC Strengthening & Activation
+        </h3>
+
+        <p>
+          Process document for CWPC strengthening and activation.
+        </p>
+
+        <a
+          class="btn primary"
+          href="resources/CWPC%20Strengthening%20and%20Activation%20Process%20Document.pdf"
+          target="_blank"
+          rel="noopener">
+          Open PDF
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </div>
 
 </section>
 
+
+<!-- CONTACT -->
 
 <section id="contact" class="contact">
 
-<div class="container">
+  <div class="container">
 
-<div class="contact-box">
+    <div class="contact-box">
 
-<div>
+      <div>
 
-<div class="eyebrow">Get In Touch</div>
+        <div class="eyebrow">
+          Get In Touch
+        </div>
 
-<h2>Let's Connect</h2>
+        <h2>
+          Let's Connect
+        </h2>
 
-<p class="lead">
-For collaboration, training, child protection,
-programme management and social development related
-work, feel free to connect.
-</p>
+        <p class="lead">
+          For collaboration, training, child protection,
+          programme management and social development related
+          work, feel free to connect.
+        </p>
 
-<div class="buttons">
 
-<a class="btn secondary"
-href="mailto:srivastavaarpit928@gmail.com">
-Email Me
-</a>
+        <div class="buttons">
 
-<a class="btn whatsapp-btn"
-href="https://wa.me/919005841098?text=Hello%20Arpit%20Srivastava"
-target="_blank">
-WhatsApp Me
-</a>
+          <a
+            class="btn secondary"
+            href="mailto:srivastavaarpit928@gmail.com">
+            Email Me
+          </a>
 
-</div>
+          <a
+            class="btn whatsapp-btn"
+            href="https://wa.me/919005841098?text=Hello%20Arpit%20Srivastava"
+            target="_blank"
+            rel="noopener">
+            WhatsApp Me
+          </a>
 
-</div>
+        </div>
 
-<div class="contact-details">
+      </div>
 
-<div>
-<strong>Email</strong><br>
-srivastavaarpit928@gmail.com
-</div>
 
-<div>
-<strong>WhatsApp</strong><br>
-+91 9005841098
-</div>
+      <div class="contact-details">
 
-<div>
-<strong>Website</strong><br>
-arpitsrivastava.co.in
-</div>
+        <div>
+          <strong>Email</strong><br>
+          srivastavaarpit928@gmail.com
+        </div>
 
-</div>
+        <div>
+          <strong>WhatsApp</strong><br>
+          +91 9005841098
+        </div>
 
-</div>
+        <div>
+          <strong>Website</strong><br>
+          arpitsrivastava.co.in
+        </div>
 
-</div>
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
-<div class="container">
-© 2026 Arpit Srivastava. All Rights Reserved.
-</div>
+
+  <div class="container">
+
+    © 2026 Arpit Srivastava. All Rights Reserved.
+
+  </div>
+
 </footer>
 
 </body>
