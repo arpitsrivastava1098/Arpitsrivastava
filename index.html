@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Arpit Srivastava — Social Development Professional | Child Protection | Programme Management | Government Systems Strengthening | Training | IEC Material | SOP | Module Development">
+<meta name="description" content="Arpit Srivastava — Social Development Professional | Child Protection | Livelihood | GPDP | IEC Material | Modules | Expert Support">
 
 <title>Arpit Srivastava | Social Development Professional</title>
 
@@ -39,7 +39,7 @@ max-width:1150px;
 margin:auto
 }
 
-/* ================= NAVIGATION ================= */
+/* NAV */
 
 nav{
 position:fixed;
@@ -71,9 +71,10 @@ color:#d9a441
 
 .nav-links{
 display:flex;
-gap:17px;
+gap:18px;
 font-size:13px;
-align-items:center
+flex-wrap:wrap;
+justify-content:flex-end
 }
 
 .nav-links a{
@@ -84,13 +85,14 @@ transition:.3s
 color:#e9bd5e
 }
 
-/* ================= HERO / HOME ================= */
+/* HERO / HOME */
 
 .hero{
 min-height:100vh;
 padding:120px 0 70px;
 display:flex;
 align-items:center;
+
 background:
 radial-gradient(
 circle at 80% 35%,
@@ -143,10 +145,6 @@ color:#aaa;
 max-width:950px
 }
 
-.hero-copy{
-font-size:16px
-}
-
 .profile{
 max-width:430px;
 margin:auto
@@ -173,7 +171,7 @@ transform:translateY(-12px)
 
 }
 
-/* ================= BUTTONS ================= */
+/* BUTTONS */
 
 .buttons{
 display:flex;
@@ -189,8 +187,7 @@ border:1px solid #d9a441;
 border-radius:6px;
 font-weight:bold;
 transition:.3s;
-background:transparent;
-color:#f5f5f5
+cursor:pointer
 }
 
 .btn:hover{
@@ -226,7 +223,7 @@ background:#4aa3ff;
 color:#111
 }
 
-/* ================= SECTIONS ================= */
+/* SECTION */
 
 section{
 padding:90px 0
@@ -238,7 +235,7 @@ line-height:1.1;
 margin:10px 0 15px
 }
 
-/* ================= STATS ================= */
+/* STATS */
 
 .stats{
 display:grid;
@@ -273,7 +270,7 @@ font-size:12px;
 text-transform:uppercase
 }
 
-/* ================= CARDS ================= */
+/* CARDS */
 
 .cards{
 display:grid;
@@ -283,11 +280,7 @@ margin-top:35px
 }
 
 .card{
-background:linear-gradient(
-145deg,
-#151a1d,
-#0e1214
-);
+background:linear-gradient(145deg,#151a1d,#0e1214);
 border:1px solid rgba(255,255,255,.09);
 padding:25px;
 border-radius:9px;
@@ -315,7 +308,113 @@ font-weight:bold;
 margin-bottom:10px
 }
 
-/* ================= EXPERT ================= */
+/* CONSULTANCY */
+
+.consultancy{
+background:
+linear-gradient(
+135deg,
+#12100b,
+#0b1113
+)
+}
+
+.consultancy-box{
+margin-top:35px;
+background:linear-gradient(145deg,#151a1d,#0e1214);
+border:1px solid rgba(217,164,65,.3);
+border-radius:14px;
+padding:35px
+}
+
+.consultancy-select{
+width:100%;
+max-width:650px;
+background:#111619;
+color:#fff;
+border:1px solid #d9a441;
+border-radius:8px;
+padding:15px;
+font-size:16px;
+outline:none;
+margin:15px 0 10px
+}
+
+.consultancy-select option{
+background:#111619;
+color:#fff
+}
+
+.consultancy-note{
+color:#999;
+margin-bottom:25px
+}
+
+.service-info{
+display:none;
+margin-top:25px;
+padding:25px;
+background:#0d1214;
+border-left:3px solid #d9a441;
+border-radius:8px
+}
+
+.service-info.active{
+display:block
+}
+
+.service-info h3{
+color:#e9bd5e;
+font-size:25px;
+margin-bottom:10px
+}
+
+.service-info p{
+color:#aaa
+}
+
+.consultancy-services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-top:30px
+}
+
+.service-card{
+background:#111619;
+border:1px solid rgba(255,255,255,.09);
+padding:20px;
+border-radius:8px
+}
+
+.service-card h3{
+color:#e9bd5e;
+margin-bottom:8px
+}
+
+.service-card p{
+color:#aaa;
+font-size:14px
+}
+
+.consultancy-contact{
+margin-top:30px;
+padding-top:25px;
+border-top:1px solid rgba(255,255,255,.1)
+}
+
+.consultancy-contact h3{
+font-size:25px;
+margin-bottom:10px
+}
+
+.contact-name{
+color:#e9bd5e;
+font-size:22px;
+font-weight:bold
+}
+
+/* TALK TO EXPERT */
 
 .expert-wrap{
 margin-top:35px
@@ -345,11 +444,7 @@ gap:22px
 }
 
 .expert-card{
-background:linear-gradient(
-145deg,
-#151a1d,
-#0e1214
-);
+background:linear-gradient(145deg,#151a1d,#0e1214);
 border:1px solid rgba(255,255,255,.1);
 border-radius:14px;
 overflow:hidden;
@@ -434,7 +529,7 @@ flex-wrap:wrap;
 margin-top:18px
 }
 
-/* ================= COMMITTEES ================= */
+/* COMMITTEES */
 
 .committee-grid{
 display:grid;
@@ -465,7 +560,7 @@ margin-bottom:10px
 color:#aaa
 }
 
-/* ================= GALLERY ================= */
+/* GALLERY */
 
 .gallery-grid{
 display:grid;
@@ -497,7 +592,7 @@ transform:scale(1.1);
 filter:brightness(1.1)
 }
 
-/* ================= RESOURCES ================= */
+/* RESOURCES */
 
 .resources{
 display:grid;
@@ -535,127 +630,7 @@ margin-top:auto;
 text-align:center
 }
 
-/* ================= CONSULTANCY ================= */
-
-.consultancy-box{
-margin-top:40px;
-display:grid;
-grid-template-columns:1.2fr .8fr;
-gap:25px
-}
-
-.consultancy-form{
-background:linear-gradient(
-145deg,
-#151a1d,
-#0e1214
-);
-border:1px solid rgba(255,255,255,.1);
-border-radius:12px;
-padding:30px
-}
-
-.consultancy-form label{
-display:block;
-color:#e9bd5e;
-font-weight:bold;
-font-size:14px;
-margin:18px 0 8px
-}
-
-.consultancy-form label:first-child{
-margin-top:0
-}
-
-.consultancy-form input,
-.consultancy-form select,
-.consultancy-form textarea{
-width:100%;
-background:#080b0d;
-border:1px solid rgba(255,255,255,.15);
-border-radius:7px;
-padding:14px;
-color:#fff;
-font-size:15px;
-outline:none;
-font-family:Arial,Helvetica,sans-serif
-}
-
-.consultancy-form input:focus,
-.consultancy-form select:focus,
-.consultancy-form textarea:focus{
-border-color:#d9a441
-}
-
-.consultancy-form textarea{
-resize:vertical
-}
-
-.consultancy-form select option{
-background:#111619;
-color:#fff
-}
-
-.consultancy-actions{
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-margin-top:25px
-}
-
-.consultancy-actions button{
-font-family:Arial,Helvetica,sans-serif;
-font-size:14px;
-cursor:pointer
-}
-
-.consultancy-contact{
-background:
-linear-gradient(
-135deg,
-#171209,
-#121719
-);
-border:1px solid rgba(217,164,65,.3);
-border-radius:12px;
-padding:30px;
-display:flex;
-flex-direction:column;
-justify-content:center
-}
-
-.consultancy-icon{
-font-size:45px;
-margin-bottom:15px
-}
-
-.consultancy-contact h3{
-font-size:28px;
-color:#e9bd5e;
-margin-bottom:5px
-}
-
-.consultancy-contact p{
-color:#aaa;
-margin-bottom:25px
-}
-
-.consultancy-detail{
-color:#aaa;
-margin-bottom:20px;
-line-height:1.8
-}
-
-.consultancy-detail strong{
-color:#e9bd5e
-}
-
-.consultancy-contact .btn{
-margin-top:5px;
-text-align:center
-}
-
-/* ================= CONTACT ================= */
+/* CONTACT */
 
 .contact{
 background:
@@ -682,7 +657,7 @@ gap:15px
 color:#e9bd5e
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
 border-top:1px solid rgba(255,255,255,.1);
@@ -692,7 +667,7 @@ color:#777;
 font-size:13px
 }
 
-/* ================= LIGHTBOX ================= */
+/* LIGHTBOX */
 
 .lightbox{
 position:fixed;
@@ -729,7 +704,7 @@ font-size:28px;
 cursor:pointer
 }
 
-/* ================= ANIMATION ================= */
+/* REVEAL */
 
 .reveal{
 opacity:0;
@@ -744,7 +719,7 @@ opacity:1;
 transform:translateY(0)
 }
 
-/* ================= MOBILE ================= */
+/* RESPONSIVE */
 
 @media(max-width:900px){
 
@@ -767,7 +742,8 @@ justify-content:center
 
 .cards,
 .resources,
-.committee-grid{
+.committee-grid,
+.consultancy-services{
 grid-template-columns:1fr 1fr
 }
 
@@ -787,10 +763,6 @@ grid-template-columns:1fr
 grid-template-columns:1fr
 }
 
-.consultancy-box{
-grid-template-columns:1fr
-}
-
 }
 
 @media(max-width:560px){
@@ -802,7 +774,8 @@ padding:65px 0
 .cards,
 .resources,
 .committee-grid,
-.gallery-grid{
+.gallery-grid,
+.consultancy-services{
 grid-template-columns:1fr
 }
 
@@ -819,19 +792,24 @@ width:120px;
 height:155px
 }
 
-.consultancy-form,
-.consultancy-contact{
+.consultancy-box{
 padding:22px
 }
 
-.consultancy-actions{
-flex-direction:column
 }
 
-.consultancy-actions .btn,
-.consultancy-actions button{
-text-align:center;
-width:100%
+/* MOBILE MENU BUTTON */
+
+.mobile-menu{
+display:none;
+font-size:26px;
+cursor:pointer
+}
+
+@media(max-width:900px){
+
+.mobile-menu{
+display:block
 }
 
 }
@@ -841,37 +819,50 @@ width:100%
 
 <body>
 
-
-<!-- ================= NAVIGATION ================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
 <div class="container nav-inner">
 
-<a href="#home" class="logo">
+<a href="#top" class="logo">
 ARPIT <span>SRIVASTAVA</span>
 </a>
 
 <div class="nav-links">
 
-<a href="#home">Home</a>
+<a href="#top">Home</a>
 
-<a href="#about">About Me</a>
+<a href="#about">About</a>
 
 <a href="#expertise">Expertise</a>
 
 <a href="#experts">Talk to Expert</a>
 
-<a href="#committees">Committees</a>
+<a href="#consultancy">
+Consultancy Services
+</a>
 
-<a href="#gallery">Gallery</a>
+<a href="#committees">
+Committees
+</a>
 
-<a href="#resources">IEC & Modules</a>
+<a href="#gallery">
+Gallery
+</a>
 
-<a href="#consultancy">Consultancy</a>
+<a href="#resources">
+IEC & Modules
+</a>
 
-<a href="#contact">Contact</a>
+<a href="#contact">
+Contact
+</a>
 
+</div>
+
+<div class="mobile-menu">
+☰
 </div>
 
 </div>
@@ -879,50 +870,43 @@ ARPIT <span>SRIVASTAVA</span>
 </nav>
 
 
-<!-- ================= HOME ================= -->
+<!-- HOME -->
 
-<header class="hero" id="home">
+<header class="hero" id="top">
 
 <div class="container hero-grid">
 
 <div class="reveal">
 
 <div class="kicker">
-Welcome to my professional platform
+Welcome
 </div>
 
 <h1>
-Arpit <span>Srivastava</span>
+Welcome to my
+<span>Professional Platform</span>
 </h1>
 
 <div class="hero-title">
-Social Development • Child Protection • Livelihood • GPDP • IEC Material • Modules • Expert Support
+Learning • Resources • Professional Knowledge • Field Experiences • Expert Support
 </div>
 
 <p class="hero-copy">
+
 Welcome to my professional platform — a space for learning, resources, professional knowledge, field experiences and direct expert support in the social development sector.
-</p>
 
-<p class="hero-copy" style="margin-top:15px;">
 Dedicated to driving meaningful change, this initiative centers on building robust child protection systems, safeguarding rights, and creating environments where every young life can thrive.
-</p>
 
-<p class="hero-copy" style="margin-top:15px;">
 From advocating against child labor and early marriage to navigating complex legal frameworks like the POCSO Act, the objective is to translate field insights into actionable, real-world solutions.
-</p>
 
-<p class="hero-copy" style="margin-top:15px;">
 By equipping communities, educators, and organizations with practical tools and knowledge, we can proactively shield children from abuse, neglect, and emerging digital threats while prioritizing their mental well-being.
+
 </p>
 
 <div class="buttons">
 
 <a class="btn primary" href="#about">
-Explore About Me
-</a>
-
-<a class="btn" href="#expertise">
-Explore Expertise
+Explore Platform
 </a>
 
 <a class="btn whatsapp"
@@ -938,7 +922,9 @@ WhatsApp
 
 <div class="profile reveal">
 
-<img src="profile.jpeg" alt="Arpit Srivastava">
+<img
+src="profile.jpeg"
+alt="Arpit Srivastava">
 
 </div>
 
@@ -947,7 +933,7 @@ WhatsApp
 </header>
 
 
-<!-- ================= ABOUT ME ================= -->
+<!-- ABOUT -->
 
 <section id="about">
 
@@ -964,19 +950,19 @@ Social Development Professional
 </h2>
 
 <p class="lead">
-I am a Social Development Professional with <strong>10+ years of professional experience</strong> working across child protection, child rights, government systems strengthening, programme management, training, capacity building, data management and evidence-based programme planning.
+
+I am a Social Development Professional with
+<strong>10+ years of professional experience</strong>
+working across child protection, child rights, government systems strengthening, programme management, training, capacity building, data management and evidence-based programme planning.
+
 </p>
 
 <br>
 
 <p class="lead">
+
 I work closely with government functionaries, frontline workers, community institutions and other stakeholders to strengthen systems, improve coordination and support effective implementation.
-</p>
 
-<br>
-
-<p class="lead">
-My professional work focuses on translating field experience, programme learning and evidence into practical solutions that can strengthen communities, institutions and government systems.
 </p>
 
 </div>
@@ -1011,7 +997,7 @@ My professional work focuses on translating field experience, programme learning
 </section>
 
 
-<!-- ================= EXPERTISE ================= -->
+<!-- EXPERTISE -->
 
 <section id="expertise">
 
@@ -1028,30 +1014,15 @@ Areas of Expertise
 </h2>
 
 <p class="lead">
+
 My experience covers child protection, girls' empowerment, education, health and nutrition, migration, livelihoods, community development and government systems strengthening.
+
 </p>
 
 </div>
 
 
 <div class="cards">
-
-
-<div class="card reveal">
-
-<h3>
-Child Protection
-</h3>
-
-<div class="location">
-📍 Uttar Pradesh
-</div>
-
-<p>
-Strengthening child protection systems through community and institutional mechanisms, prevention of child labour and child marriage, referral systems, child rights awareness and government convergence.
-</p>
-
-</div>
 
 
 <div class="card reveal">
@@ -1065,7 +1036,9 @@ KAWACH – Child Protection
 </div>
 
 <p>
+
 Strengthening child protection systems through community and institutional mechanisms, prevention of child labour and child marriage, referral systems and government convergence.
+
 </p>
 
 </div>
@@ -1082,7 +1055,9 @@ SHASHAKTI – HAUSLA
 </div>
 
 <p>
+
 Adolescent girls' empowerment through life skills, leadership, education, health awareness and community participation.
+
 </p>
 
 </div>
@@ -1099,7 +1074,28 @@ Mata Sabri Poshan
 </div>
 
 <p>
+
 Work focused on nutrition awareness, community mobilisation and strengthening coordination around child and maternal nutrition.
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<h3>
+Child Protection Systems
+</h3>
+
+<div class="location">
+📍 Uttar Pradesh
+</div>
+
+<p>
+
+Capacity building of stakeholders, child protection committees, referral mechanisms, child rights awareness and government convergence.
+
 </p>
 
 </div>
@@ -1116,24 +1112,9 @@ GPDP & Panchayati Raj
 </div>
 
 <p>
+
 Supporting participatory planning, Gram Panchayat Development Plans, data use and evidence-based local development.
-</p>
 
-</div>
-
-
-<div class="card reveal">
-
-<h3>
-Livelihood & Community Development
-</h3>
-
-<div class="location">
-📍 Field Programmes
-</div>
-
-<p>
-Community mobilisation, livelihood initiatives, awareness generation, institution strengthening and convergence with local stakeholders.
 </p>
 
 </div>
@@ -1150,7 +1131,9 @@ Training & Capacity Building
 </div>
 
 <p>
+
 Designing and facilitating training programmes for government functionaries, frontline workers, community institutions and other stakeholders.
+
 </p>
 
 </div>
@@ -1167,7 +1150,28 @@ Data & Evidence
 </div>
 
 <p>
+
 Data management, monitoring, documentation, analysis and use of evidence for programme planning and decision making.
+
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<h3>
+Community Development
+</h3>
+
+<div class="location">
+📍 Field Programmes
+</div>
+
+<p>
+
+Community mobilisation, awareness generation, institution strengthening and convergence with local stakeholders.
+
 </p>
 
 </div>
@@ -1184,7 +1188,9 @@ Government Coordination
 </div>
 
 <p>
+
 Coordination with government departments, district administration, police and community-level institutions.
+
 </p>
 
 </div>
@@ -1196,7 +1202,7 @@ Coordination with government departments, district administration, police and co
 </section>
 
 
-<!-- ================= TALK TO EXPERT ================= -->
+<!-- TALK TO EXPERT -->
 
 <section id="experts">
 
@@ -1213,11 +1219,9 @@ Talk to Expert
 </h2>
 
 <p class="lead">
-This is a dedicated space where you can connect directly with professionals working in different areas of the social development sector.
-</p>
 
-<p class="lead" style="margin-top:12px;">
-Select an area below to find the relevant expert and discuss Child Protection, Livelihood, Health & Nutrition, GPDP or Government Systems Strengthening.
+Select an area below and connect directly with a relevant expert. Each profile contains portfolio highlights and direct contact options.
+
 </p>
 
 </div>
@@ -1352,6 +1356,10 @@ State Lead – Uttar Pradesh & Madhya Pradesh • Government Partnerships • Ch
 </div>
 
 <p>
+<strong>State Lead – Uttar Pradesh & Madhya Pradesh</strong>
+</p>
+
+<p>
 <strong>20+ years</strong> of technical and managerial experience in project management and grant management with non-profits and international development agencies.
 </p>
 
@@ -1362,7 +1370,7 @@ State Lead – Uttar Pradesh & Madhya Pradesh • Government Partnerships • Ch
 <span class="tag">Project Management</span>
 <span class="tag">Grant Management</span>
 <span class="tag">Policy Advocacy</span>
-<span class="tag">Communications</span>
+<span class="tag">Communications & Campaigns</span>
 
 </div>
 
@@ -1425,7 +1433,7 @@ Director, ROSA SANSTHAN • Livelihood & Health & Nutrition Expert
 <div class="expert-tags">
 
 <span class="tag">Livelihood</span>
-<span class="tag">Goat Rearing</span>
+<span class="tag">Goat Rearing Model</span>
 <span class="tag">Health & Nutrition</span>
 <span class="tag">Community Development</span>
 
@@ -1611,7 +1619,453 @@ WhatsApp
 </section>
 
 
-<!-- ================= COMMITTEES ================= -->
+<!-- CONSULTANCY SERVICES -->
+
+<section id="consultancy" class="consultancy">
+
+<div class="container">
+
+<div class="reveal">
+
+<div class="eyebrow">
+Professional Services
+</div>
+
+<h2>
+Contact for Consultancy Services
+</h2>
+
+<p class="lead">
+
+For professional consultancy, training, capacity building, programme design, child protection systems strengthening, livelihood, health and nutrition, education, FLN, GPDP and development-sector resource creation, please select the required service below.
+
+</p>
+
+</div>
+
+
+<div class="consultancy-box reveal">
+
+
+<label for="consultancyService">
+
+<strong>
+Select Consultancy Service
+</strong>
+
+</label>
+
+
+<select
+id="consultancyService"
+class="consultancy-select">
+
+<option value="">
+-- Select a Service --
+</option>
+
+<option value="training">
+Training & Capacity Building
+</option>
+
+<option value="child">
+Child Protection
+</option>
+
+<option value="livelihood">
+Livelihood
+</option>
+
+<option value="health">
+Health & Nutrition
+</option>
+
+<option value="education">
+Education
+</option>
+
+<option value="fln">
+Foundational Literacy & Numeracy (FLN)
+</option>
+
+<option value="gpdp">
+GPDP & Panchayati Raj
+</option>
+
+<option value="iec">
+IEC Material Development
+</option>
+
+<option value="sop">
+SOP Development
+</option>
+
+<option value="module">
+Module Development
+</option>
+
+</select>
+
+
+<div class="consultancy-note">
+
+Select a service to see the type of professional support available.
+
+</div>
+
+
+<!-- SERVICE INFO -->
+
+
+<div
+class="service-info"
+id="service-training">
+
+<h3>
+Training & Capacity Building
+</h3>
+
+<p>
+Designing and facilitating customized training programmes for government functionaries, frontline workers, NGOs, community institutions, PRIs, teachers, educators and other stakeholders. Training can be developed according to the specific needs of the organization, programme or target group.
+</p>
+
+</div>
+
+
+<div
+class="service-info"
+id="service-child">
+
+<h3>
+Child Protection
+</h3>
+
+<p>
+Consultancy and technical support related to child protection systems, child rights, child labour prevention, child marriage prevention, POCSO, JJ Act, referral mechanisms, Child Protection Committees, government convergence, capacity building and community-based child protection.
+</p>
+
+</div>
+
+
+<div
+class="service-info"
+id="service-livelihood">
+
+<h3>
+Livelihood
+</h3>
+
+<p>
+Support for community-based livelihood planning, livelihood models, capacity building, community institutions, household economic strengthening and participatory development approaches.
+</p>
+
+</div>
+
+
+<div
+class="service-info"
+id="service-health">
+
+<h3>
+Health & Nutrition
+</h3>
+
+<p>
+Technical support for health and nutrition awareness, maternal and child nutrition, community mobilisation, capacity building, programme planning and convergence with relevant stakeholders.
+</p>
+
+</div>
+
+
+<div
+class="service-info"
+id="service-education">
+
+<h3>
+Education
+</h3>
+
+<p>
+Support for education programmes, school-community engagement, teacher and stakeholder capacity building, awareness programmes, educational resources and programme implementation.
+</p>
+
+</div>
+
+
+<div
+class="service-info"
+id="service-fln">
+
+<h3>
+Foundational Literacy & Numeracy (FLN)
+</h3>
+
+<p>
+Consultancy and training support related to Foundational Literacy and Numeracy, learning enhancement, community participation, school-level interventions, capacity building and educational resource development.
+</p>
+
+</div>
+
+
+<div
+class="service-info"
+id="service-gpdp">
+
+<h3>
+GPDP & Panchayati Raj
+</h3>
+
+<p>
+Technical support related to Gram Panchayat Development Plans, participatory planning, data use, Panchayati Raj Institutions, SDG localization, evidence-based planning and local development.
+</p>
+
+</div>
+
+
+<div
+class="service-info"
+id="service-iec">
+
+<h3>
+IEC Material Development
+</h3>
+
+<p>
+Contact for development of professional IEC materials including posters, leaflets, brochures, awareness content, communication tools, training aids and other information, education and communication resources for development programmes.
+</p>
+
+</div>
+
+
+<div
+class="service-info"
+id="service-sop">
+
+<h3>
+SOP Development
+</h3>
+
+<p>
+Contact for developing practical and programme-specific Standard Operating Procedures (SOPs), process documents, operational guidelines, workflows and implementation frameworks for organizations and development programmes.
+</p>
+
+</div>
+
+
+<div
+class="service-info"
+id="service-module">
+
+<h3>
+Module Development
+</h3>
+
+<p>
+Contact for professional training module development, facilitator guides, participant materials, session plans, activity-based learning resources and programme-specific capacity-building modules.
+</p>
+
+</div>
+
+
+<!-- ALL SERVICES -->
+
+
+<div class="consultancy-services">
+
+
+<div class="service-card">
+
+<h3>
+Training
+</h3>
+
+<p>
+Customized training and capacity-building programmes.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>
+Child Protection
+</h3>
+
+<p>
+Child rights, protection systems and safeguarding support.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>
+Livelihood
+</h3>
+
+<p>
+Community-based livelihood and economic strengthening.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>
+Health & Nutrition
+</h3>
+
+<p>
+Health, nutrition and community mobilisation support.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>
+Education
+</h3>
+
+<p>
+Education programme and capacity-building support.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>
+FLN
+</h3>
+
+<p>
+Foundational Literacy & Numeracy support.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>
+GPDP
+</h3>
+
+<p>
+GPDP, Panchayati Raj and participatory planning.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>
+IEC Material
+</h3>
+
+<p>
+Professional IEC material development.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>
+SOP Development
+</h3>
+
+<p>
+Standard Operating Procedures and process documents.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>
+Module Development
+</h3>
+
+<p>
+Training modules and facilitator resources.
+</p>
+
+</div>
+
+
+</div>
+
+
+<!-- CONTACT -->
+
+<div class="consultancy-contact">
+
+<div class="contact-name">
+Arpit Srivastava
+</div>
+
+<h3>
+Let's discuss your requirement.
+</h3>
+
+<p class="lead">
+
+For consultancy, training services, IEC Material development, SOP development or Module development, please contact directly.
+
+</p>
+
+
+<div class="buttons">
+
+<a
+class="btn call"
+href="tel:+919005841098">
+
+📞 Call +91 9005841098
+
+</a>
+
+
+<a
+class="btn whatsapp"
+href="https://wa.me/919005841098?text=Hello%20Arpit%20Srivastava%2C%20I%20would%20like%20to%20discuss%20consultancy%20services."
+target="_blank">
+
+WhatsApp
+
+</a>
+
+
+<a
+class="btn primary"
+href="mailto:srivastavaarpit928@gmail.com?subject=Consultancy%20Service%20Enquiry">
+
+Email
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COMMITTEES -->
 
 <section id="committees">
 
@@ -1628,7 +2082,9 @@ Committee Membership
 </h2>
 
 <p class="lead">
+
 Member/supporting member in government-linked committees and task forces related to child protection, workplace safety and social issues.
+
 </p>
 
 </div>
@@ -1675,6 +2131,7 @@ Member of the committee dealing with workplace safety, prevention of sexual hara
 
 </div>
 
+
 </div>
 
 </div>
@@ -1682,7 +2139,7 @@ Member of the committee dealing with workplace safety, prevention of sexual hara
 </section>
 
 
-<!-- ================= GALLERY ================= -->
+<!-- GALLERY -->
 
 <section id="gallery">
 
@@ -1699,7 +2156,9 @@ Field Work & Activities
 </h2>
 
 <p class="lead">
+
 Selected moments from professional engagements, trainings, government coordination meetings, awareness programmes and field activities.
+
 </p>
 
 </div>
@@ -1712,37 +2171,46 @@ Selected moments from professional engagements, trainings, government coordinati
 <img src="1704942335413.jpg" alt="Arpit Srivastava activity">
 </div>
 
+
 <div class="gallery-item reveal">
 <img src="1739446058978.jpg" alt="Arpit Srivastava activity">
 </div>
+
 
 <div class="gallery-item reveal">
 <img src="1743402101143.jpg" alt="Arpit Srivastava activity">
 </div>
 
+
 <div class="gallery-item reveal">
 <img src="1758335082413.jpg" alt="Arpit Srivastava activity">
 </div>
+
 
 <div class="gallery-item reveal">
 <img src="1758909439720.jpg" alt="Arpit Srivastava activity">
 </div>
 
+
 <div class="gallery-item reveal">
 <img src="arpit 2.jpeg" alt="Arpit Srivastava activity">
 </div>
+
 
 <div class="gallery-item reveal">
 <img src="arpit 3.jpeg" alt="Arpit Srivastava activity">
 </div>
 
+
 <div class="gallery-item reveal">
 <img src="arpit 4.jpg" alt="Arpit Srivastava activity">
 </div>
 
+
 <div class="gallery-item reveal">
 <img src="arpit.jpeg" alt="Arpit Srivastava activity">
 </div>
+
 
 </div>
 
@@ -1751,7 +2219,7 @@ Selected moments from professional engagements, trainings, government coordinati
 </section>
 
 
-<!-- ================= IEC MATERIAL & MODULES ================= -->
+<!-- RESOURCES -->
 
 <section id="resources">
 
@@ -1764,11 +2232,13 @@ IEC Material & Modules
 </div>
 
 <h2>
-Resources & Learning Material
+Resources
 </h2>
 
 <p class="lead">
-Access selected IEC materials, child protection resources, training modules, community development documents and programme resources.
+
+Selected child protection, community development, training, IEC and programme resources.
+
 </p>
 
 </div>
@@ -1787,10 +2257,13 @@ KAWACH Module
 Child protection and child rights training module.
 </p>
 
-<a class="btn"
+<a
+class="btn"
 href="resources/Kawach%20Madule.pdf"
 target="_blank">
+
 Open PDF
+
 </a>
 
 </div>
@@ -1806,10 +2279,13 @@ Meena Manch Module
 Training and facilitation resource for adolescent girls.
 </p>
 
-<a class="btn"
+<a
+class="btn"
 href="resources/Meena%20munch%20module.pdf"
 target="_blank">
+
 Open PDF
+
 </a>
 
 </div>
@@ -1825,10 +2301,13 @@ CWPC Strengthening
 Child Welfare and Protection Committee strengthening document.
 </p>
 
-<a class="btn"
+<a
+class="btn"
 href="resources/CWPC%20Strengthening%20and%20Activation%20Process%20Document.pdf"
 target="_blank">
+
 Open PDF
+
 </a>
 
 </div>
@@ -1844,10 +2323,13 @@ Bal Sanrakshan
 Child protection related training resource.
 </p>
 
-<a class="btn"
+<a
+class="btn"
 href="resources/Bal%20sanrakshan%2010-03-2026%20(1).pdf"
 target="_blank">
+
 Open PDF
+
 </a>
 
 </div>
@@ -1863,10 +2345,13 @@ SHG Module
 Self Help Group and community development resource.
 </p>
 
-<a class="btn"
+<a
+class="btn"
 href="resources/SHG%20Module.pdf"
 target="_blank">
+
 Open PDF
+
 </a>
 
 </div>
@@ -1882,13 +2367,17 @@ Yojana Module
 Programme and government scheme related resource.
 </p>
 
-<a class="btn"
+<a
+class="btn"
 href="resources/Yojana%20Module%2004-26.pdf"
 target="_blank">
+
 Open PDF
+
 </a>
 
 </div>
+
 
 </div>
 
@@ -1897,230 +2386,11 @@ Open PDF
 </section>
 
 
-<!-- ================= CONSULTANCY ================= -->
-
-<section id="consultancy">
-
-<div class="container">
-
-<div class="reveal">
-
-<div class="eyebrow">
-Professional Consultancy
-</div>
-
-<h2>
-Training & Consultancy Services
-</h2>
-
-<p class="lead">
-Professional training and consultancy support is available across Child Protection, Livelihood, Health & Nutrition, Education, FLN, GPDP and related social development areas.
-</p>
-
-<p class="lead" style="margin-top:15px;">
-Consultancy support is also available for the development of
-<strong>IEC Materials, SOPs, Training Modules, Capacity Building Resources and other professional learning materials.</strong>
-</p>
-
-<p class="lead" style="margin-top:15px;">
-For development of IEC materials, SOPs, modules or other customised professional resources, please contact me for consultancy support.
-</p>
-
-</div>
-
-
-<div class="consultancy-box reveal">
-
-
-<!-- FORM -->
-
-<div class="consultancy-form">
-
-<label>
-Your Name
-</label>
-
-<input
-type="text"
-id="consultName"
-placeholder="Enter your name"
-required
->
-
-
-<label>
-Mobile Number
-</label>
-
-<input
-type="tel"
-id="consultPhone"
-placeholder="Enter your mobile number"
-required
->
-
-
-<label>
-Select Consultancy / Training Area
-</label>
-
-<select id="consultArea">
-
-<option value="">
--- Select an Area --
-</option>
-
-<option value="Training">
-Training
-</option>
-
-<option value="Child Protection">
-Child Protection
-</option>
-
-<option value="Livelihood">
-Livelihood
-</option>
-
-<option value="Health and Nutrition">
-Health and Nutrition
-</option>
-
-<option value="Education">
-Education
-</option>
-
-<option value="FLN">
-FLN
-</option>
-
-<option value="GPDP">
-GPDP
-</option>
-
-<option value="IEC Material Development">
-IEC Material Development
-</option>
-
-<option value="SOP Development">
-SOP Development
-</option>
-
-<option value="Module Development">
-Module Development
-</option>
-
-</select>
-
-
-<label>
-Your Message / Requirement
-</label>
-
-<textarea
-id="consultMessage"
-rows="6"
-placeholder="Write your requirement or message..."
-></textarea>
-
-
-<div class="consultancy-actions">
-
-<button
-type="button"
-class="btn whatsapp"
-onclick="sendConsultancyWhatsApp()">
-💬 Send Direct Message
-</button>
-
-
-<a
-class="btn call"
-href="tel:+919005841098">
-📞 Call Me
-</a>
-
-</div>
-
-</div>
-
-
-<!-- CONTACT CARD -->
-
-<div class="consultancy-contact">
-
-<div class="consultancy-icon">
-📞
-</div>
-
-<h3>
-Arpit Srivastava
-</h3>
-
-<p>
-Social Development Professional
-</p>
-
-
-<div class="consultancy-detail">
-
-<strong>
-Training & Consultancy Areas
-</strong>
-
-<br>
-
-Training • Child Protection • Livelihood • Health & Nutrition • Education • FLN • GPDP • IEC Material • SOP • Module Development
-
-</div>
-
-
-<div class="consultancy-detail">
-
-<strong>
-Mobile / WhatsApp
-</strong>
-
-<br>
-
-+91 9005841098
-
-</div>
-
-
-<div class="consultancy-detail">
-
-<strong>
-Professional Support
-</strong>
-
-<br>
-
-Training, Capacity Building, IEC Material Development, SOP Development, Module Development and customised learning resources.
-</div>
-
-
-<a
-class="btn primary"
-href="tel:+919005841098">
-📞 Call for Consultancy
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 
 <section id="contact" class="contact">
 
 <div class="container contact-grid">
-
 
 <div class="reveal">
 
@@ -2133,7 +2403,9 @@ Let's Connect
 </h2>
 
 <p class="lead">
-For collaboration, training, child protection resources, programme support, capacity building, consultancy or professional discussions, feel free to connect.
+
+For collaboration, training, child protection resources, programme support, capacity building, consultancy, IEC Material, SOP or Module development, feel free to connect.
+
 </p>
 
 
@@ -2142,7 +2414,9 @@ For collaboration, training, child protection resources, programme support, capa
 <a
 class="btn primary"
 href="mailto:srivastavaarpit928@gmail.com">
+
 Email Me
+
 </a>
 
 
@@ -2150,7 +2424,18 @@ Email Me
 class="btn whatsapp"
 href="https://wa.me/919005841098?text=Hello%20Arpit%20Srivastava"
 target="_blank">
+
 WhatsApp Me
+
+</a>
+
+
+<a
+class="btn call"
+href="tel:+919005841098">
+
+Call Me
+
 </a>
 
 </div>
@@ -2162,9 +2447,18 @@ WhatsApp Me
 
 <div>
 
-<strong>
-Email
-</strong>
+<strong>Name</strong>
+
+<br>
+
+Arpit Srivastava
+
+</div>
+
+
+<div>
+
+<strong>Email</strong>
 
 <br>
 
@@ -2175,9 +2469,7 @@ srivastavaarpit928@gmail.com
 
 <div>
 
-<strong>
-WhatsApp
-</strong>
+<strong>WhatsApp / Phone</strong>
 
 <br>
 
@@ -2188,9 +2480,7 @@ WhatsApp
 
 <div>
 
-<strong>
-Location
-</strong>
+<strong>Location</strong>
 
 <br>
 
@@ -2205,7 +2495,7 @@ Uttar Pradesh, India
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -2218,30 +2508,43 @@ Uttar Pradesh, India
 </footer>
 
 
-<!-- ================= LIGHTBOX ================= -->
+<!-- LIGHTBOX -->
 
-<div class="lightbox" id="lightbox">
+<div
+class="lightbox"
+id="lightbox">
 
-<button class="close" onclick="closeLightbox()">
+<button
+class="close"
+onclick="closeLightbox()">
+
 ×
+
 </button>
 
-<img id="lightboxImage" src="" alt="Gallery Photo">
+<img
+id="lightboxImage"
+src=""
+alt="Gallery Photo">
 
 </div>
 
 
 <script>
 
-/* ================= SCROLL REVEAL ================= */
+/* REVEAL ANIMATION */
 
-const reveals=document.querySelectorAll(".reveal");
+const reveals =
+document.querySelectorAll(".reveal");
 
-const observer=new IntersectionObserver(
+const observer =
+new IntersectionObserver(
 
-entries=>{
+entries => {
 
-entries.forEach(entry=>{
+entries.forEach(
+
+entry => {
 
 if(entry.isIntersecting){
 
@@ -2249,180 +2552,186 @@ entry.target.classList.add("show");
 
 }
 
-});
+}
+
+);
 
 },
 
-{threshold:.12}
+{
+threshold:.12
+}
 
 );
 
-reveals.forEach(el=>observer.observe(el));
+reveals.forEach(
+el => observer.observe(el)
+);
 
 
-/* ================= EXPERT FILTER ================= */
+/* TALK TO EXPERT FILTER */
 
-const filter=document.getElementById("expertFilter");
+const filter =
+document.getElementById("expertFilter");
 
-const cards=document.querySelectorAll(".expert-card");
+const cards =
+document.querySelectorAll(".expert-card");
 
-filter.addEventListener("change",function(){
+if(filter){
 
-const selected=this.value;
+filter.addEventListener(
+"change",
+function(){
 
-cards.forEach(card=>{
+const selected =
+this.value;
 
-const categories=card.dataset.expertise.split(" ");
+cards.forEach(
+card => {
 
-card.hidden=!(
-selected==="all" ||
+const categories =
+card.dataset.expertise.split(" ");
+
+card.hidden = !(
+selected === "all" ||
 categories.includes(selected)
 );
 
-});
-
-});
-
-
-/* ================= CONSULTANCY WHATSAPP ================= */
-
-function sendConsultancyWhatsApp(){
-
-const name=document
-.getElementById("consultName")
-.value
-.trim();
-
-const phone=document
-.getElementById("consultPhone")
-.value
-.trim();
-
-const area=document
-.getElementById("consultArea")
-.value;
-
-const message=document
-.getElementById("consultMessage")
-.value
-.trim();
-
-
-if(!name){
-
-alert("Please enter your name.");
-
-return;
+}
+);
 
 }
-
-
-if(!phone){
-
-alert("Please enter your mobile number.");
-
-return;
-
-}
-
-
-if(!area){
-
-alert("Please select a consultancy or training area.");
-
-return;
-
-}
-
-
-const finalMessage =
-"Hello Arpit Srivastava,%0A%0A" +
-
-"I am interested in your Training & Consultancy Services.%0A%0A" +
-
-"Name: " +
-encodeURIComponent(name) +
-"%0A" +
-
-"Mobile: " +
-encodeURIComponent(phone) +
-"%0A" +
-
-"Service / Area: " +
-encodeURIComponent(area) +
-"%0A" +
-
-"Message: " +
-encodeURIComponent(
-message ||
-"I would like to discuss this service."
-) +
-
-"%0A%0AThank you.";
-
-
-window.open(
-"https://wa.me/919005841098?text=" +
-finalMessage,
-"_blank"
 );
 
 }
 
 
-/* ================= GALLERY LIGHTBOX ================= */
+/* CONSULTANCY DROPDOWN */
 
-const lightbox=
-document.getElementById("lightbox");
+const consultancyService =
+document.getElementById(
+"consultancyService"
+);
 
-const lightboxImage=
-document.getElementById("lightboxImage");
+const serviceBoxes =
+document.querySelectorAll(
+".service-info"
+);
+
+if(consultancyService){
+
+consultancyService.addEventListener(
+"change",
+function(){
+
+serviceBoxes.forEach(
+box => {
+
+box.classList.remove(
+"active"
+);
+
+}
+);
+
+if(this.value){
+
+const selectedBox =
+document.getElementById(
+"service-" + this.value
+);
+
+if(selectedBox){
+
+selectedBox.classList.add(
+"active"
+);
+
+}
+
+}
+
+}
+);
+
+}
+
+
+/* LIGHTBOX */
+
+const lightbox =
+document.getElementById(
+"lightbox"
+);
+
+const lightboxImage =
+document.getElementById(
+"lightboxImage"
+);
 
 
 document
 .querySelectorAll(".gallery-item img")
-.forEach(img=>{
+.forEach(
 
-img.addEventListener("click",()=>{
+img => {
 
-lightboxImage.src=img.src;
+img.addEventListener(
+"click",
+() => {
 
-lightbox.classList.add("active");
+lightboxImage.src =
+img.src;
 
-});
+lightbox.classList.add(
+"active"
+);
 
-});
+}
+);
+
+}
+
+);
 
 
 function closeLightbox(){
 
-lightbox.classList.remove("active");
+lightbox.classList.remove(
+"active"
+);
 
 lightboxImage.src="";
 
 }
 
 
-lightbox.addEventListener("click",e=>{
+lightbox.addEventListener(
+"click",
+e => {
 
-if(e.target===lightbox){
-
-closeLightbox();
-
-}
-
-});
-
-
-document.addEventListener("keydown",e=>{
-
-if(e.key==="Escape"){
+if(e.target === lightbox){
 
 closeLightbox();
 
 }
 
-});
+}
+);
+
+
+document.addEventListener(
+"keydown",
+e => {
+
+if(e.key === "Escape"){
+
+closeLightbox();
+
+}
+
+}
+);
 
 </script>
 
