@@ -1988,33 +1988,9 @@ IEC and programme resources.
 
 </div>
 
-<div class="expert-wrap reveal">
-
-<select id="resourceFilter" class="expert-select">
-
-<option value="all">
-All Resources
-</option>
-
-<option value="modules">
-Modules & Training
-</option>
-
-<option value="law">
-Law & Guideline
-</option>
-
-</select>
-
-<div class="expert-note">
-Choose a category to filter resources.
-</div>
-
-</div>
-
 <div class="resources">
 
-<div class="resource reveal" data-category="modules">
+<div class="resource reveal">
 
 <h3>
 KAWACH Module
@@ -2033,7 +2009,7 @@ Open PDF
 </div>
 
 
-<div class="resource reveal" data-category="modules">
+<div class="resource reveal">
 
 <h3>
 Meena Manch Module
@@ -2052,7 +2028,7 @@ Open PDF
 </div>
 
 
-<div class="resource reveal" data-category="modules">
+<div class="resource reveal">
 
 <h3>
 CWPC Strengthening
@@ -2071,7 +2047,7 @@ Open PDF
 </div>
 
 
-<div class="resource reveal" data-category="modules">
+<div class="resource reveal">
 
 <h3>
 Bal Sanrakshan
@@ -2090,7 +2066,7 @@ Open PDF
 </div>
 
 
-<div class="resource reveal" data-category="modules">
+<div class="resource reveal">
 
 <h3>
 SHG Module
@@ -2109,7 +2085,7 @@ Open PDF
 </div>
 
 
-<div class="resource reveal" data-category="modules">
+<div class="resource reveal">
 
 <h3>
 Yojana Module
@@ -2121,86 +2097,6 @@ Programme and government scheme related resource.
 
 <a class="btn"
 href="resources/Yojana%20Module%2004-26.pdf"
-target="_blank">
-Open PDF
-</a>
-
-</div>
-
-
-<div class="resource reveal" data-category="law">
-
-<h3>
-Juvenile Justice Act, 2015
-</h3>
-
-<p>
-Juvenile Justice (Care and Protection of Children) Act, 2015 —
-core legal framework for child protection in India.
-</p>
-
-<a class="btn"
-href="resources/2015.pdf"
-target="_blank">
-Open PDF
-</a>
-
-</div>
-
-
-<div class="resource reveal" data-category="law">
-
-<h3>
-CARA Adoption Regulations, 2016
-</h3>
-
-<p>
-Central Adoption Resource Authority (CARA) Rules governing
-adoption procedures and compliance.
-</p>
-
-<a class="btn"
-href="resources/CARA-Rules-2016.pdf"
-target="_blank">
-Open PDF
-</a>
-
-</div>
-
-
-<div class="resource reveal" data-category="law">
-
-<h3>
-CPC Formation Guidelines
-</h3>
-
-<p>
-Guidelines for formation of Child Protection Committees under
-Mission Vatsalya.
-</p>
-
-<a class="btn"
-href="resources/CPC_formation_under_MV.pdf"
-target="_blank">
-Open PDF
-</a>
-
-</div>
-
-
-<div class="resource reveal" data-category="law">
-
-<h3>
-Mission Vatsalya Guideline
-</h3>
-
-<p>
-Government of India scheme guideline for child protection and
-child welfare services.
-</p>
-
-<a class="btn"
-href="resources/vatsalyaguideline.pdf"
 target="_blank">
 Open PDF
 </a>
@@ -2368,31 +2264,6 @@ categories.includes(selected)
 });
 
 });
-
-
-/* RESOURCE FILTER */
-
-const resourceFilter=document.getElementById("resourceFilter");
-const resourceCards=document.querySelectorAll(".resource");
-
-if(resourceFilter){
-
-resourceFilter.addEventListener("change",function(){
-
-const selected=this.value;
-
-resourceCards.forEach(card=>{
-
-card.hidden=!(
-selected==="all" ||
-card.dataset.category===selected
-);
-
-});
-
-});
-
-}
 
 
 /* GALLERY LIGHTBOX */
