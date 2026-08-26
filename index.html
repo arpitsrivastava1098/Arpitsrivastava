@@ -4,661 +4,536 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Arpit Srivastava — Social Development Professional, Child Protection, Government Systems Strengthening, Training, Data & Evidence.">
+<meta name="description" content="Arpit Srivastava — Social Development Professional | Child Protection | Programme Management | Government Systems Strengthening">
 
 <title>Arpit Srivastava | Social Development Professional</title>
 
 <style>
 
-:root{
-  --bg:#0b0d0f;
-  --gold:#d9a441;
-  --gold2:#f0c56b;
-  --text:#f4f1e9;
-  --muted:#b8b5ad;
-  --line:rgba(255,255,255,.10);
-}
-
 *{
-  box-sizing:border-box;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.6;
-  overflow-x:hidden;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#080b0d;
+    color:#f5f5f5;
+    line-height:1.6;
+    overflow-x:hidden;
 }
 
 a{
-  color:inherit;
-  text-decoration:none;
+    text-decoration:none;
+    color:inherit;
 }
 
 .container{
-  width:min(1160px,92%);
-  margin:auto;
+    width:92%;
+    max-width:1150px;
+    margin:auto;
 }
 
-/* NAVIGATION */
+/* NAVBAR */
 
 nav{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:100;
-  background:rgba(11,13,15,.88);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(8,11,13,.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.1);
 }
 
 .nav-inner{
-  min-height:70px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+    min-height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.brand{
-  font-weight:800;
-  letter-spacing:2px;
+.logo{
+    font-weight:800;
+    font-size:18px;
+    letter-spacing:2px;
 }
 
-.brand span{
-  color:var(--gold);
+.logo span{
+    color:#d9a441;
 }
 
 .nav-links{
-  display:flex;
-  gap:24px;
-  font-size:14px;
-  color:#ddd;
+    display:flex;
+    gap:22px;
+    font-size:14px;
 }
 
 .nav-links a{
-  transition:.3s;
+    transition:.3s;
 }
 
 .nav-links a:hover{
-  color:var(--gold2);
-  transform:translateY(-2px);
-}
-
-/* COMMON */
-
-section{
-  padding:90px 0;
-}
-
-.section-head{
-  margin-bottom:38px;
-}
-
-.eyebrow{
-  font-size:12px;
-  letter-spacing:3px;
-  color:var(--gold);
-  text-transform:uppercase;
-  font-weight:800;
-}
-
-h2{
-  font-size:clamp(32px,4vw,52px);
-  margin:8px 0 10px;
-  line-height:1.05;
-}
-
-.lead{
-  color:var(--muted);
-  max-width:950px;
+    color:#e9bd5e;
 }
 
 /* HERO */
 
 .hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  padding:110px 0 70px;
+    min-height:100vh;
+    padding:120px 0 70px;
+    display:flex;
+    align-items:center;
 
-  background:
+    background:
     radial-gradient(
-      circle at 75% 40%,
-      rgba(217,164,65,.18),
-      transparent 35%
+        circle at 80% 35%,
+        rgba(217,164,65,.2),
+        transparent 35%
     ),
     linear-gradient(
-      135deg,
-      #07090b,
-      #17120c 60%,
-      #090b0d
+        135deg,
+        #07090b,
+        #17120b,
+        #080b0d
     );
 }
 
 .hero-grid{
-  display:grid;
-  grid-template-columns:1.05fr .75fr;
-  gap:55px;
-  align-items:center;
-}
-
-.hero-content{
-  max-width:720px;
+    display:grid;
+    grid-template-columns:1.1fr .8fr;
+    gap:60px;
+    align-items:center;
 }
 
 .kicker{
-  color:var(--gold2);
-  font-size:13px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  font-weight:700;
+    color:#e6ba5b;
+    font-size:13px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-weight:bold;
 }
 
 h1{
-  font-size:clamp(48px,7vw,88px);
-  line-height:.95;
-  margin:18px 0 22px;
-  letter-spacing:-3px;
+    font-size:clamp(48px,7vw,85px);
+    line-height:.95;
+    margin:20px 0;
+    letter-spacing:-3px;
 }
 
 h1 span{
-  color:var(--gold);
+    color:#d9a441;
 }
 
 .hero-title{
-  font-size:21px;
-  color:#eee;
+    font-size:21px;
+    margin-bottom:20px;
 }
 
 .hero-copy{
-  color:var(--muted);
-  max-width:720px;
-  margin:22px 0;
+    color:#b9b9b9;
+    max-width:720px;
 }
 
-/* PROFILE */
-
 .profile{
-  width:min(100%,450px);
-  margin:auto;
+    max-width:430px;
+    margin:auto;
 }
 
 .profile img{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,.14);
-  box-shadow:0 30px 80px rgba(0,0,0,.55);
+    width:100%;
+    display:block;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 30px 80px rgba(0,0,0,.6);
+    animation:float 5s ease-in-out infinite;
+}
 
-  animation:float 5s ease-in-out infinite;
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
 }
 
 /* BUTTONS */
 
 .buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:28px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:28px;
 }
 
 .btn{
-  display:inline-block;
-  padding:13px 20px;
-  border-radius:5px;
-  border:1px solid var(--gold);
-  font-weight:700;
-  cursor:pointer;
-  transition:.3s ease;
+    display:inline-block;
+    padding:13px 20px;
+    border:1px solid #d9a441;
+    border-radius:5px;
+    font-weight:bold;
+    transition:.3s;
 }
 
-.btn.primary{
-  background:var(--gold);
-  color:#111;
+.btn:hover{
+    transform:translateY(-4px);
 }
 
-.btn.primary:hover{
-  background:var(--gold2);
-  transform:translateY(-3px);
-  box-shadow:0 10px 25px rgba(217,164,65,.2);
+.primary{
+    background:#d9a441;
+    color:#111;
 }
 
-.btn.secondary{
-  background:transparent;
+.primary:hover{
+    background:#efc66e;
 }
 
-.btn.secondary:hover{
-  background:var(--gold);
-  color:#111;
-  transform:translateY(-3px);
+.whatsapp{
+    border-color:#25D366;
+    color:#25D366;
 }
 
-.whatsapp-btn{
-  border-color:#25D366;
-  color:#25D366;
+.whatsapp:hover{
+    background:#25D366;
+    color:#111;
 }
 
-.whatsapp-btn:hover{
-  background:#25D366;
-  color:#111;
-  transform:translateY(-3px);
+/* SECTIONS */
+
+section{
+    padding:90px 0;
 }
 
-/* IMPACT */
-
-.impact-strip{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
-  margin:28px 0;
+.eyebrow{
+    color:#d9a441;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-weight:bold;
 }
 
-.impact-stat{
-  background:#111518;
-  border:1px solid rgba(217,164,65,.28);
-  padding:18px 15px;
-  border-radius:7px;
-  text-align:center;
-  transition:.35s;
+h2{
+    font-size:clamp(32px,5vw,52px);
+    line-height:1.1;
+    margin:10px 0 15px;
 }
 
-.impact-stat:hover{
-  transform:translateY(-7px);
-  border-color:var(--gold);
+.lead{
+    color:#aaa;
+    max-width:950px;
 }
 
-.impact-stat strong{
-  display:block;
-  color:var(--gold2);
-  font-size:28px;
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:35px;
 }
 
-.impact-stat span{
-  color:#b9bec3;
-  font-size:11px;
-  text-transform:uppercase;
+.stat{
+    background:#111619;
+    border:1px solid rgba(217,164,65,.25);
+    border-radius:8px;
+    padding:20px;
+    text-align:center;
+    transition:.3s;
+}
+
+.stat:hover{
+    transform:translateY(-7px);
+    border-color:#d9a441;
+}
+
+.stat strong{
+    display:block;
+    font-size:28px;
+    color:#e9bd5e;
+}
+
+.stat span{
+    color:#aaa;
+    font-size:12px;
+    text-transform:uppercase;
 }
 
 /* CARDS */
 
 .cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:35px;
 }
 
 .card{
-  background:linear-gradient(145deg,#151a1e,#0f1215);
-  border:1px solid var(--line);
-  padding:25px;
-  border-radius:8px;
-  transition:.35s ease;
-  position:relative;
-  overflow:hidden;
-}
-
-.card:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    120deg,
-    transparent,
-    rgba(240,197,107,.08),
-    transparent
-  );
-  transform:translateX(-100%);
-  transition:.6s;
-}
-
-.card:hover:before{
-  transform:translateX(100%);
+    background:linear-gradient(145deg,#151a1d,#0e1214);
+    border:1px solid rgba(255,255,255,.09);
+    padding:25px;
+    border-radius:9px;
+    transition:.4s;
+    position:relative;
+    overflow:hidden;
 }
 
 .card:hover{
-  transform:translateY(-8px);
-  border-color:rgba(217,164,65,.45);
-  box-shadow:0 18px 40px rgba(0,0,0,.25);
+    transform:translateY(-8px);
+    border-color:rgba(217,164,65,.5);
+    box-shadow:0 20px 45px rgba(0,0,0,.3);
 }
 
 .card h3{
-  margin-top:0;
-  color:#fff;
+    margin-bottom:10px;
 }
 
 .card p{
-  color:var(--muted);
+    color:#aaa;
 }
 
 .location{
-  display:inline-block;
-  color:var(--gold2);
-  font-size:13px;
-  font-weight:700;
-  margin-bottom:10px;
+    color:#e9bd5e;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:10px;
 }
 
 /* GALLERY */
 
 .gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:35px;
 }
 
 .gallery-item{
-  position:relative;
-  overflow:hidden;
-  border-radius:10px;
-  border:1px solid var(--line);
-  background:#111;
-  cursor:pointer;
-  aspect-ratio:4/3;
+    height:260px;
+    overflow:hidden;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,.1);
+    cursor:pointer;
+    background:#111;
+    position:relative;
 }
 
 .gallery-item img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transition:
-    transform .6s cubic-bezier(.2,.7,.2,1),
-    filter .4s;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .7s ease,filter .4s ease;
 }
 
 .gallery-item:hover img{
-  transform:scale(1.08);
-  filter:brightness(1.08);
+    transform:scale(1.1);
+    filter:brightness(1.1);
 }
 
-.gallery-item:after{
-  content:"View photo";
-  position:absolute;
-  left:12px;
-  bottom:10px;
-  padding:5px 9px;
-  border-radius:5px;
-  background:rgba(0,0,0,.65);
-  font-size:11px;
-  letter-spacing:1px;
-  opacity:0;
-  transform:translateY(8px);
-  transition:.3s;
+.gallery-item::after{
+    content:"VIEW PHOTO";
+    position:absolute;
+    left:15px;
+    bottom:12px;
+    background:rgba(0,0,0,.7);
+    padding:5px 9px;
+    border-radius:4px;
+    font-size:10px;
+    letter-spacing:1px;
+    opacity:0;
+    transition:.3s;
 }
 
-.gallery-item:hover:after{
-  opacity:1;
-  transform:translateY(0);
+.gallery-item:hover::after{
+    opacity:1;
 }
 
 /* RESOURCES */
 
-.resources-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+.resources{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:35px;
 }
 
-.resource-card{
-  background:linear-gradient(145deg,#151a1e,#0f1215);
-  border:1px solid var(--line);
-  padding:25px;
-  border-radius:8px;
-  display:flex;
-  flex-direction:column;
-  transition:.35s ease;
+.resource{
+    background:#121719;
+    border:1px solid rgba(255,255,255,.1);
+    padding:25px;
+    border-radius:8px;
+    display:flex;
+    flex-direction:column;
+    transition:.35s;
 }
 
-.resource-card:hover{
-  transform:translateY(-8px);
-  border-color:rgba(217,164,65,.45);
-  box-shadow:0 18px 40px rgba(0,0,0,.25);
+.resource:hover{
+    transform:translateY(-7px);
+    border-color:#d9a441;
 }
 
-.resource-card h3{
-  margin:0 0 8px;
+.resource p{
+    color:#aaa;
+    margin:10px 0 20px;
 }
 
-.resource-card p{
-  color:var(--muted);
-  margin:0 0 18px;
-}
-
-.resource-card .btn{
-  margin-top:auto;
-  text-align:center;
-}
-
-.resource-label{
-  font-size:11px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:var(--gold);
-  font-weight:800;
-  margin-bottom:8px;
+.resource .btn{
+    margin-top:auto;
+    text-align:center;
 }
 
 /* CONTACT */
 
 .contact{
-  background:linear-gradient(135deg,#17120a,#0f1417);
+    background:linear-gradient(135deg,#171209,#0c1113);
 }
 
-.contact-box{
-  display:grid;
-  grid-template-columns:1.3fr .7fr;
-  gap:30px;
-  align-items:center;
+.contact-grid{
+    display:grid;
+    grid-template-columns:1.3fr .7fr;
+    gap:40px;
+    align-items:center;
 }
 
 .contact-details{
-  display:grid;
-  gap:15px;
-  color:#ddd;
+    display:grid;
+    gap:15px;
 }
 
 .contact-details strong{
-  color:var(--gold2);
+    color:#e9bd5e;
 }
 
 /* FOOTER */
 
 footer{
-  padding:28px 0;
-  border-top:1px solid var(--line);
-  color:#8e8e8e;
-  font-size:13px;
-  text-align:center;
+    border-top:1px solid rgba(255,255,255,.1);
+    padding:28px 0;
+    text-align:center;
+    color:#777;
+    font-size:13px;
 }
 
 /* LIGHTBOX */
 
 .lightbox{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.92);
-  z-index:500;
-
-  display:none;
-  align-items:center;
-  justify-content:center;
-
-  padding:25px;
+    position:fixed;
+    inset:0;
+    z-index:2000;
+    background:rgba(0,0,0,.94);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
 }
 
-.lightbox.show{
-  display:flex;
-  animation:fadeIn .25s ease;
+.lightbox.active{
+    display:flex;
 }
 
 .lightbox img{
-  max-width:92vw;
-  max-height:88vh;
-  border-radius:10px;
-  box-shadow:0 30px 80px #000;
+    max-width:94vw;
+    max-height:90vh;
+    border-radius:10px;
+    box-shadow:0 30px 100px #000;
 }
 
-.lightbox button{
-  position:absolute;
-  top:18px;
-  right:22px;
-
-  border:1px solid #777;
-  background:#111;
-  color:#fff;
-
-  border-radius:50%;
-  width:44px;
-  height:44px;
-
-  font-size:24px;
-  cursor:pointer;
+.close{
+    position:absolute;
+    top:20px;
+    right:25px;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:1px solid #777;
+    background:#111;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
 }
 
 /* SCROLL MOTION */
 
 .reveal{
-  opacity:0;
-  transform:translateY(35px);
-
-  transition:
-    opacity .8s ease,
-    transform .8s ease;
-}
-
-.reveal.visible{
-  opacity:1;
-  transform:none;
-}
-
-/* ANIMATIONS */
-
-@keyframes float{
-
-  0%,100%{
-    transform:translateY(0);
-  }
-
-  50%{
-    transform:translateY(-10px);
-  }
-
-}
-
-@keyframes fadeIn{
-
-  from{
     opacity:0;
-  }
+    transform:translateY(35px);
+    transition:opacity .8s ease,transform .8s ease;
+}
 
-  to{
+.reveal.show{
     opacity:1;
-  }
-
+    transform:translateY(0);
 }
 
 /* MOBILE */
 
 @media(max-width:850px){
 
-  .nav-links{
-    display:none;
-  }
+    .nav-links{
+        display:none;
+    }
 
-  .hero-grid{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
+    .hero-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
 
-  .hero-content{
-    max-width:850px;
-    margin:auto;
-  }
+    .hero-copy{
+        margin:auto;
+    }
 
-  .buttons{
-    justify-content:center;
-  }
+    .buttons{
+        justify-content:center;
+    }
 
-  .profile{
-    max-width:520px;
-  }
+    .cards,
+    .resources{
+        grid-template-columns:1fr 1fr;
+    }
 
-  .cards,
-  .resources-grid{
-    grid-template-columns:1fr 1fr;
-  }
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
 
-  .impact-strip{
-    grid-template-columns:1fr 1fr;
-  }
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
 
-  .contact-box{
-    grid-template-columns:1fr;
-  }
-
-  .gallery-grid{
-    grid-template-columns:1fr 1fr;
-  }
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
 
 }
 
 @media(max-width:560px){
 
-  section{
-    padding:65px 0;
-  }
+    section{
+        padding:65px 0;
+    }
 
-  h1{
-    letter-spacing:-2px;
-  }
+    .cards,
+    .resources,
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
 
-  .hero-title{
-    font-size:18px;
-  }
+    .gallery-item{
+        height:250px;
+    }
 
-  .cards,
-  .resources-grid{
-    grid-template-columns:1fr;
-  }
-
-  .impact-strip{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .profile{
-    width:100%;
-  }
-
-  .gallery-grid{
-    grid-template-columns:1fr;
-  }
-
-}
-
-/* REDUCE MOTION FOR ACCESSIBILITY */
-
-@media(prefers-reduced-motion:reduce){
-
-  *,
-  *:before,
-  *:after{
-    animation:none !important;
-    transition:none !important;
-    scroll-behavior:auto !important;
-  }
-
-  .reveal{
-    opacity:1;
-    transform:none;
-  }
+    .hero-title{
+        font-size:18px;
+    }
 
 }
 
@@ -673,13 +548,13 @@ footer{
 
 <div class="container nav-inner">
 
-<a class="brand" href="#top">
+<a href="#top" class="logo">
 ARPIT <span>SRIVASTAVA</span>
 </a>
 
 <div class="nav-links">
 
-<a href="#about">About Me</a>
+<a href="#about">About</a>
 <a href="#expertise">Expertise</a>
 <a href="#committees">Committees</a>
 <a href="#gallery">Gallery</a>
@@ -699,10 +574,10 @@ ARPIT <span>SRIVASTAVA</span>
 
 <div class="container hero-grid">
 
-<div class="hero-content reveal">
+<div class="reveal">
 
 <div class="kicker">
-10+ Years of Experience • Social Development • Child Protection • Governance
+10+ Years of Experience • Social Development
 </div>
 
 <h1>
@@ -723,28 +598,18 @@ monitoring and evidence-based programme planning.
 
 </p>
 
-<p>
-
-<strong>500+ trainings</strong> •
-<strong>10,000+ people trained</strong> •
-<strong>100+ government circulars</strong> •
-<strong>GPDP & PAI Master Trainer</strong>
-
-</p>
-
 <div class="buttons">
 
 <a
-class="btn secondary"
+class="btn primary"
 href="mailto:srivastavaarpit928@gmail.com">
 Get in Touch
 </a>
 
 <a
-class="btn whatsapp-btn"
+class="btn whatsapp"
 href="https://wa.me/919005841098?text=Hello%20Arpit%20Srivastava"
-target="_blank"
-rel="noopener">
+target="_blank">
 WhatsApp
 </a>
 
@@ -753,9 +618,9 @@ WhatsApp
 </div>
 
 
-<!-- PROFILE PHOTO -->
-
 <div class="profile reveal">
+
+<!-- अपनी profile photo का exact filename यहाँ रखें -->
 
 <img
 src="profile.jpeg"
@@ -772,26 +637,17 @@ alt="Arpit Srivastava">
 
 <section id="about">
 
-<div class="container reveal">
+<div class="container">
 
-<div class="section-head">
+<div class="reveal">
 
 <div class="eyebrow">
 About Me
 </div>
 
 <h2>
-Arpit Srivastava
+Social Development Professional
 </h2>
-
-<p class="lead">
-
-<strong>10+ Years of Experience</strong> •
-Social Development • Child Protection •
-Government Systems Strengthening • Training •
-Data & Evidence
-
-</p>
 
 <p class="lead">
 
@@ -803,6 +659,8 @@ training, capacity building, data management and
 evidence-based programme planning.
 
 </p>
+
+<br>
 
 <p class="lead">
 
@@ -816,24 +674,24 @@ and support effective implementation.
 </div>
 
 
-<div class="impact-strip">
+<div class="stats">
 
-<div class="impact-stat">
+<div class="stat reveal">
 <strong>10+</strong>
 <span>Years Experience</span>
 </div>
 
-<div class="impact-stat">
+<div class="stat reveal">
 <strong>500+</strong>
-<span>Trainings Delivered</span>
+<span>Trainings</span>
 </div>
 
-<div class="impact-stat">
+<div class="stat reveal">
 <strong>10,000+</strong>
 <span>People Trained</span>
 </div>
 
-<div class="impact-stat">
+<div class="stat reveal">
 <strong>100+</strong>
 <span>Government Circulars</span>
 </div>
@@ -851,7 +709,7 @@ and support effective implementation.
 
 <div class="container">
 
-<div class="section-head reveal">
+<div class="reveal">
 
 <div class="eyebrow">
 Expertise & Project Experience
@@ -864,9 +722,8 @@ Areas of Expertise
 <p class="lead">
 
 My experience covers child protection, girls' empowerment,
-education, health and nutrition, migrant welfare,
-livelihoods, community development and government
-systems strengthening across Uttar Pradesh.
+education, health and nutrition, migration, livelihoods,
+community development and government systems strengthening.
 
 </p>
 
@@ -875,24 +732,16 @@ systems strengthening across Uttar Pradesh.
 
 <div class="cards">
 
-
 <div class="card reveal">
 
-<h3>
-KAWACH – Child Protection
-</h3>
+<h3>KAWACH – Child Protection</h3>
 
-<div class="location">
-📍 Balrampur, Uttar Pradesh
-</div>
+<div class="location">📍 Balrampur, Uttar Pradesh</div>
 
 <p>
-
 Strengthening child protection systems through community
 and institutional mechanisms, prevention of child labour
-and child marriage, referral, child-friendly environments,
-social protection access and government convergence.
-
+and child marriage, referral and government convergence.
 </p>
 
 </div>
@@ -900,21 +749,14 @@ social protection access and government convergence.
 
 <div class="card reveal">
 
-<h3>
-SHASHAKTI – HAUSLA
-</h3>
+<h3>SHASHAKTI – HAUSLA</h3>
 
-<div class="location">
-📍 Chandauli, Uttar Pradesh
-</div>
+<div class="location">📍 Chandauli, Uttar Pradesh</div>
 
 <p>
-
 Adolescent girls' empowerment through life skills,
-confidence, leadership, education, health awareness,
-career readiness, community participation and gender
-equality activities.
-
+leadership, education, health awareness and community
+participation.
 </p>
 
 </div>
@@ -922,20 +764,13 @@ equality activities.
 
 <div class="card reveal">
 
-<h3>
-TALEEM – Foundational Learning
-</h3>
+<h3>TALEEM – Foundational Learning</h3>
 
-<div class="location">
-📍 Chakia Block, Chandauli
-</div>
+<div class="location">📍 Chakia Block, Chandauli</div>
 
 <p>
-
-Foundational literacy and numeracy, pre-school education,
-school readiness, learning support, Anganwadi capacity
-strengthening, school enrolment, attendance and retention.
-
+Foundational literacy and numeracy, school readiness,
+Anganwadi capacity strengthening and learning support.
 </p>
 
 </div>
@@ -943,20 +778,13 @@ strengthening, school enrolment, attendance and retention.
 
 <div class="card reveal">
 
-<h3>
-SANJIVANI – Health & Nutrition
-</h3>
+<h3>SANJIVANI – Health & Nutrition</h3>
 
-<div class="location">
-📍 Chakia, Chandauli
-</div>
+<div class="location">📍 Chakia, Chandauli</div>
 
 <p>
-
 Maternal and child health, nutrition, growth monitoring,
-anaemia screening, menstrual health awareness, counselling,
-referrals and linkages with public health and nutrition services.
-
+anaemia screening, menstrual health awareness and referrals.
 </p>
 
 </div>
@@ -964,21 +792,13 @@ referrals and linkages with public health and nutrition services.
 
 <div class="card reveal">
 
-<h3>
-KAWACH – Migration / MRC
-</h3>
+<h3>KAWACH – Migration / MRC</h3>
 
-<div class="location">
-📍 Unnao & Ghazipur, Uttar Pradesh
-</div>
+<div class="location">📍 Unnao & Ghazipur</div>
 
 <p>
-
 Migrant worker welfare, social security, labour rights,
-safe migration, government welfare schemes, documentation,
-counselling, referrals, grievance support and government
-department convergence.
-
+safe migration, documentation and government scheme linkages.
 </p>
 
 </div>
@@ -986,21 +806,13 @@ department convergence.
 
 <div class="card reveal">
 
-<h3>
-SWAVLAMBAN – Livelihood Support
-</h3>
+<h3>SWAVLAMBAN – Livelihood Support</h3>
 
-<div class="location">
-📍 Tarwa, Azamgarh & Chakia, Chandauli
-</div>
+<div class="location">📍 Azamgarh & Chandauli</div>
 
 <p>
-
 Livelihood support for vulnerable families through
-goat-based livelihood, asset creation, technical support,
-animal health, household assets and greater economic
-self-reliance.
-
+asset creation, technical support and economic self-reliance.
 </p>
 
 </div>
@@ -1008,20 +820,13 @@ self-reliance.
 
 <div class="card reveal">
 
-<h3>
-Mata Sabri – Pre-School Education & Nutrition
-</h3>
+<h3>Mata Sabri – Pre-School Education & Nutrition</h3>
 
-<div class="location">
-📍 Chandauli, Uttar Pradesh
-</div>
+<div class="location">📍 Chandauli</div>
 
 <p>
-
-Pre-school education, supplementary nutrition, education
-support, learning materials and basic welfare assistance
-for children and ultra-poor families.
-
+Pre-school education, supplementary nutrition, learning
+materials and welfare support for children and vulnerable families.
 </p>
 
 </div>
@@ -1029,20 +834,13 @@ for children and ultra-poor families.
 
 <div class="card reveal">
 
-<h3>
-Training & Capacity Building
-</h3>
+<h3>Training & Capacity Building</h3>
 
-<div class="location">
-📍 Uttar Pradesh
-</div>
+<div class="location">📍 Uttar Pradesh</div>
 
 <p>
-
-Design and facilitation of capacity-building processes
-for government functionaries, frontline workers,
-community representatives and other stakeholders.
-
+Design and facilitation of capacity-building programmes
+for government functionaries, frontline workers and communities.
 </p>
 
 </div>
@@ -1050,21 +848,13 @@ community representatives and other stakeholders.
 
 <div class="card reveal">
 
-<h3>
-Government Systems & Convergence
-</h3>
+<h3>Government Systems & Convergence</h3>
 
-<div class="location">
-📍 Uttar Pradesh
-</div>
+<div class="location">📍 Uttar Pradesh</div>
 
 <p>
-
 Strengthening coordination between communities,
-government departments, local institutions and frontline
-systems for effective programme implementation and service
-delivery.
-
+government departments, local institutions and frontline systems.
 </p>
 
 </div>
@@ -1072,20 +862,13 @@ delivery.
 
 <div class="card reveal">
 
-<h3>
-Data, MIS & Evidence
-</h3>
+<h3>Data, MIS & Evidence</h3>
 
-<div class="location">
-📍 Uttar Pradesh
-</div>
+<div class="location">📍 Uttar Pradesh</div>
 
 <p>
-
 Programme data, MIS, monitoring frameworks, reporting
-systems and evidence-based analysis for planning,
-monitoring and decision-making.
-
+systems and evidence-based analysis.
 </p>
 
 </div>
@@ -1093,20 +876,13 @@ monitoring and decision-making.
 
 <div class="card reveal">
 
-<h3>
-GPDP & PAI Master Trainer
-</h3>
+<h3>GPDP & PAI Master Trainer</h3>
 
-<div class="location">
-📍 Uttar Pradesh
-</div>
+<div class="location">📍 Uttar Pradesh</div>
 
 <p>
-
-Training, facilitation, government coordination and
-capacity building related to Gram Panchayat Development
-Planning and Panchayat-level assessment processes.
-
+Training and facilitation related to Gram Panchayat
+Development Planning and Panchayat-level assessment processes.
 </p>
 
 </div>
@@ -1114,20 +890,13 @@ Planning and Panchayat-level assessment processes.
 
 <div class="card reveal">
 
-<h3>
-Programme Management
-</h3>
+<h3>Programme Management</h3>
 
-<div class="location">
-📍 Uttar Pradesh
-</div>
+<div class="location">📍 Uttar Pradesh</div>
 
 <p>
-
-Programme planning, monitoring, coordination,
-documentation, reporting and evidence-based programme
-implementation.
-
+Programme planning, monitoring, coordination, documentation,
+reporting and evidence-based programme implementation.
 </p>
 
 </div>
@@ -1139,28 +908,25 @@ implementation.
 </section>
 
 
-<!-- GOVERNMENT COMMITTEES -->
+<!-- COMMITTEES -->
 
 <section id="committees">
 
 <div class="container">
 
-<div class="section-head reveal">
+<div class="reveal">
 
 <div class="eyebrow">
 Government Committees
 </div>
 
 <h2>
-Government Committees & Task Forces
+Committees & Task Forces
 </h2>
 
 <p class="lead">
-
 Member of government-led committees and task forces
-working on social protection, child rights, child
-protection and workplace-related issues.
-
+working on child protection, child rights and workplace issues.
 </p>
 
 </div>
@@ -1168,19 +934,13 @@ protection and workplace-related issues.
 
 <div class="cards">
 
-
 <div class="card reveal">
 
-<h3>
-Task Force – Child Labour
-</h3>
+<h3>Task Force – Child Labour</h3>
 
 <p>
-
-Member of the government task force working on
-child labour prevention, identification, protection
-and rehabilitation.
-
+Member of the government task force working on child labour
+prevention, identification, protection and rehabilitation.
 </p>
 
 </div>
@@ -1188,16 +948,11 @@ and rehabilitation.
 
 <div class="card reveal">
 
-<h3>
-Task Force – Child Marriage
-</h3>
+<h3>Task Force – Child Marriage</h3>
 
 <p>
-
 Member of the government task force working towards
-prevention of child marriage, community awareness,
-coordination and child protection.
-
+prevention of child marriage and child protection.
 </p>
 
 </div>
@@ -1205,16 +960,11 @@ coordination and child protection.
 
 <div class="card reveal">
 
-<h3>
-Vishakha Samiti
-</h3>
+<h3>Vishakha Samiti</h3>
 
 <p>
-
-Member of the Vishakha Samiti, contributing to a safe,
-respectful and supportive working environment and
-related institutional processes.
-
+Member of the Vishakha Samiti contributing to a safe,
+respectful and supportive working environment.
 </p>
 
 </div>
@@ -1232,7 +982,7 @@ related institutional processes.
 
 <div class="container">
 
-<div class="section-head reveal">
+<div class="reveal">
 
 <div class="eyebrow">
 Gallery
@@ -1243,10 +993,8 @@ Work & Field Gallery
 </h2>
 
 <p class="lead">
-
 Selected moments from field work, trainings,
 meetings and professional activities.
-
 </p>
 
 </div>
@@ -1261,7 +1009,7 @@ meetings and professional activities.
 
 <img
 src="1704942335413.jpg"
-alt="Professional activity">
+alt="Arpit Srivastava professional activity">
 
 </div>
 
@@ -1272,7 +1020,7 @@ alt="Professional activity">
 
 <img
 src="1739446058978.jpg"
-alt="Field activity">
+alt="Arpit Srivastava field activity">
 
 </div>
 
@@ -1283,7 +1031,7 @@ alt="Field activity">
 
 <img
 src="1743402101143.jpg"
-alt="Professional activity">
+alt="Arpit Srivastava professional activity">
 
 </div>
 
@@ -1294,7 +1042,7 @@ alt="Professional activity">
 
 <img
 src="1758335082413.jpg"
-alt="Field activity">
+alt="Arpit Srivastava field activity">
 
 </div>
 
@@ -1305,42 +1053,10 @@ alt="Field activity">
 
 <img
 src="1758909439720.jpg"
-alt="Professional activity">
+alt="Arpit Srivastava professional activity">
 
 </div>
 
-
-<!-- PHOTO 6 -->
-
-<div class="gallery-item reveal">
-
-<img
-src="WhatsApp%20Image%202026-08-24%20at%201.37.06%20AM.jpeg"
-alt="Field activity">
-
-</div>
-
-
-<!-- PHOTO 7 -->
-
-<div class="gallery-item reveal">
-
-<img
-src="WhatsApp%20Image%202026-08-24%20at%201.37.07%20AM.jpeg"
-alt="Professional activity">
-
-</div>
-
-
-<!-- PHOTO 8 -->
-
-<div class="gallery-item reveal">
-
-<img
-src="WhatsApp%20Image%202026-08-24%20at%201.37.07%20AM%20%281%29.jpeg"
-alt="Field activity">
-
-</div>
 
 </div>
 
@@ -1355,7 +1071,7 @@ alt="Field activity">
 
 <div class="container">
 
-<div class="section-head reveal">
+<div class="reveal">
 
 <div class="eyebrow">
 Resources
@@ -1366,52 +1082,37 @@ Documents & Resources
 </h2>
 
 <p class="lead">
-
-Click any document below to open the complete PDF
-directly from the website in a new tab.
-
+Training modules, child protection resources and
+other professional documents.
 </p>
 
 </div>
 
 
-<div class="resources-grid">
+<div class="resources">
 
 
-<div class="resource-card reveal">
+<div class="resource reveal">
 
-<div class="resource-label">
-PDF Resource
-</div>
-
-<h3>
-KAWACH Module
-</h3>
+<h3>KAWACH Module</h3>
 
 <p>
-KAWACH training/module document.
+KAWACH training and child protection module.
 </p>
 
 <a
 class="btn primary"
 href="resources/Kawach%20Madule.pdf"
-target="_blank"
-rel="noopener">
+target="_blank">
 Open PDF
 </a>
 
 </div>
 
 
-<div class="resource-card reveal">
+<div class="resource reveal">
 
-<div class="resource-label">
-PDF Resource
-</div>
-
-<h3>
-SHG Module
-</h3>
+<h3>SHG Module</h3>
 
 <p>
 Self Help Group module.
@@ -1420,73 +1121,52 @@ Self Help Group module.
 <a
 class="btn primary"
 href="resources/SHG%20Module.pdf"
-target="_blank"
-rel="noopener">
+target="_blank">
 Open PDF
 </a>
 
 </div>
 
 
-<div class="resource-card reveal">
+<div class="resource reveal">
 
-<div class="resource-label">
-PDF Resource
-</div>
-
-<h3>
-Bal Sanrakshan
-</h3>
+<h3>Bal Sanrakshan</h3>
 
 <p>
-Bal Sanrakshan resource document.
+Child protection resource document.
 </p>
 
 <a
 class="btn primary"
 href="resources/Bal%20sanrakshan%2010-03-2026%20%281%29.pdf"
-target="_blank"
-rel="noopener">
+target="_blank">
 Open PDF
 </a>
 
 </div>
 
 
-<div class="resource-card reveal">
+<div class="resource reveal">
 
-<div class="resource-label">
-PDF Resource
-</div>
-
-<h3>
-Yojana Module
-</h3>
+<h3>Yojana Module</h3>
 
 <p>
-Yojana module resource document.
+Government schemes and welfare resource.
 </p>
 
 <a
 class="btn primary"
 href="resources/Yojana%20Module%2004-26.pdf"
-target="_blank"
-rel="noopener">
+target="_blank">
 Open PDF
 </a>
 
 </div>
 
 
-<div class="resource-card reveal">
+<div class="resource reveal">
 
-<div class="resource-label">
-PDF Resource
-</div>
-
-<h3>
-Meena Manch Module
-</h3>
+<h3>Meena Manch Module</h3>
 
 <p>
 Meena Manch training and resource module.
@@ -1495,37 +1175,30 @@ Meena Manch training and resource module.
 <a
 class="btn primary"
 href="resources/Meena%20munch%20module.pdf"
-target="_blank"
-rel="noopener">
+target="_blank">
 Open PDF
 </a>
 
 </div>
 
 
-<div class="resource-card reveal">
+<div class="resource reveal">
 
-<div class="resource-label">
-PDF Resource
-</div>
-
-<h3>
-CWPC Strengthening & Activation
-</h3>
+<h3>CWPC Strengthening</h3>
 
 <p>
-Process document for CWPC strengthening and activation.
+CWPC strengthening and activation process document.
 </p>
 
 <a
 class="btn primary"
 href="resources/CWPC%20Strengthening%20and%20Activation%20Process%20Document.pdf"
-target="_blank"
-rel="noopener">
+target="_blank">
 Open PDF
 </a>
 
 </div>
+
 
 </div>
 
@@ -1540,7 +1213,7 @@ Open PDF
 
 <div class="container">
 
-<div class="contact-box reveal">
+<div class="contact-grid reveal">
 
 <div>
 
@@ -1553,26 +1226,23 @@ Let's Connect
 </h2>
 
 <p class="lead">
-
 For collaboration, training, child protection,
-programme management and social development related
-work, feel free to connect.
-
+programme management and social development work,
+feel free to connect.
 </p>
 
 <div class="buttons">
 
 <a
-class="btn secondary"
+class="btn primary"
 href="mailto:srivastavaarpit928@gmail.com">
 Email Me
 </a>
 
 <a
-class="btn whatsapp-btn"
+class="btn whatsapp"
 href="https://wa.me/919005841098?text=Hello%20Arpit%20Srivastava"
-target="_blank"
-rel="noopener">
+target="_blank">
 WhatsApp Me
 </a>
 
@@ -1584,24 +1254,18 @@ WhatsApp Me
 <div class="contact-details">
 
 <div>
-
 <strong>Email</strong><br>
 srivastavaarpit928@gmail.com
-
 </div>
 
 <div>
-
 <strong>WhatsApp</strong><br>
 +91 9005841098
-
 </div>
 
 <div>
-
 <strong>Website</strong><br>
 arpitsrivastava.co.in
-
 </div>
 
 </div>
@@ -1626,33 +1290,31 @@ arpitsrivastava.co.in
 </footer>
 
 
-<!-- IMAGE LIGHTBOX -->
+<!-- LIGHTBOX -->
 
 <div
 class="lightbox"
 id="lightbox">
 
 <button
-id="closeLightbox"
-aria-label="Close">
+class="close"
+id="close">
 ×
 </button>
 
 <img
-id="lightboxImg"
+id="lightboxImage"
 src=""
-alt="Gallery preview">
+alt="Gallery photo">
 
 </div>
 
 
-<!-- MOTION SCRIPT -->
-
 <script>
 
-/* SCROLL REVEAL */
+/* SCROLL MOTION */
 
-const observer =
+const revealObserver =
 new IntersectionObserver(
 
 (entries)=>{
@@ -1661,9 +1323,9 @@ entries.forEach(entry=>{
 
 if(entry.isIntersecting){
 
-entry.target.classList.add("visible");
+entry.target.classList.add("show");
 
-observer.unobserve(entry.target);
+revealObserver.unobserve(entry.target);
 
 }
 
@@ -1672,85 +1334,75 @@ observer.unobserve(entry.target);
 },
 
 {
-threshold:0.12
+threshold:.12
 }
 
 );
 
-
 document
 .querySelectorAll(".reveal")
-.forEach(element=>{
-
-observer.observe(element);
-
+.forEach(el=>{
+    revealObserver.observe(el);
 });
 
 
-/* GALLERY LIGHTBOX */
+/* GALLERY FULL SCREEN */
 
 const lightbox =
 document.getElementById("lightbox");
 
-const lightboxImg =
-document.getElementById("lightboxImg");
+const lightboxImage =
+document.getElementById("lightboxImage");
+
+const closeButton =
+document.getElementById("close");
 
 
 document
 .querySelectorAll(".gallery-item img")
-.forEach(photo=>{
+.forEach(img=>{
 
-photo.addEventListener("click",()=>{
+img.addEventListener("click",()=>{
 
-lightboxImg.src = photo.src;
+lightboxImage.src=img.src;
+lightboxImage.alt=img.alt;
 
-lightboxImg.alt = photo.alt;
-
-lightbox.classList.add("show");
-
-});
+lightbox.classList.add("active");
 
 });
-
-
-/* CLOSE BUTTON */
-
-document
-.getElementById("closeLightbox")
-.addEventListener("click",()=>{
-
-lightbox.classList.remove("show");
 
 });
 
 
-/* CLICK OUTSIDE */
+closeButton.addEventListener("click",()=>{
+
+lightbox.classList.remove("active");
+
+});
+
 
 lightbox.addEventListener("click",(event)=>{
 
-if(event.target === lightbox){
+if(event.target===lightbox){
 
-lightbox.classList.remove("show");
+lightbox.classList.remove("active");
 
 }
 
 });
 
 
-/* ESCAPE KEY */
-
 document.addEventListener("keydown",(event)=>{
 
-if(event.key === "Escape"){
+if(event.key==="Escape"){
 
-lightbox.classList.remove("show");
+lightbox.classList.remove("active");
 
 }
 
 });
 
 </script>
-
 
 </body>
 </html>
