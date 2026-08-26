@@ -38,15 +38,16 @@ section{padding:90px 0}h2{font-size:clamp(32px,5vw,52px);line-height:1.1;margin:
     align-items:center;
     justify-content:center;
     border-radius:8px;
+    border:1px solid rgba(217,164,65,.35);
 }
 .expert-photo img{
     width:100%;
     height:100%;
     object-fit:cover;
+    object-position:center center;
     display:block;
-    transition:.5s;
 }
-.expert-card:hover .expert-photo img{transform:scale(1.04)}
+.expert-card:hover .expert-photo img{transform:scale(1.02)}
 .expert-body{padding:24px}.expert-body h3{font-size:25px;color:#f0c76b;margin-bottom:4px}.expert-role{font-weight:bold;margin-bottom:12px}.expert-body p{color:#aaa;margin:8px 0}
 .expert-tags{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}.tag{font-size:12px;border:1px solid rgba(217,164,65,.35);color:#e9bd5e;padding:5px 9px;border-radius:20px}.expert-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 .committee-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}.committee{background:#121719;border:1px solid rgba(255,255,255,.1);padding:25px;border-radius:8px;transition:.35s}.committee:hover{transform:translateY(-7px);border-color:#d9a441}.committee h3{color:#e9bd5e;margin-bottom:10px}.committee p{color:#aaa}
@@ -57,7 +58,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0;text-align:cente
 .lightbox{position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;padding:20px}.lightbox.active{display:flex}.lightbox img{max-width:94vw;max-height:90vh;border-radius:10px}.close{position:absolute;top:20px;right:25px;width:45px;height:45px;border-radius:50%;border:1px solid #777;background:#111;color:white;font-size:28px;cursor:pointer}
 .reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:translateY(0)}
 @media(max-width:900px){.nav-links{display:none}.hero-grid{grid-template-columns:1fr;text-align:center}.hero-copy{margin:auto}.buttons{justify-content:center}.cards,.resources,.committee-grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.gallery-grid{grid-template-columns:1fr 1fr}.expert-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}}
-@media(max-width:560px){section{padding:65px 0}.cards,.resources,.committee-grid,.gallery-grid{grid-template-columns:1fr}.gallery-item{height:250px}.hero-title{font-size:18px}.expert-photo{height:290px}}
+@media(max-width:560px){section{padding:65px 0}.cards,.resources,.committee-grid,.gallery-grid{grid-template-columns:1fr}.gallery-item{height:250px}.hero-title{font-size:18px}.expert-photo{width:120px;height:155px}}
 </style>
 </head>
 <body>
@@ -104,7 +105,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0;text-align:cente
 <div class="expert-grid">
 
 <article class="expert-card reveal" data-expertise="child"><div class="expert-photo">
-<img src="resources/WhatsApp%20Image%202026-08-26%20at%202.45.47%20PM.jpeg" alt="Nirupama Singh" onerror="this.src='resources/Nirupama.jpeg'">
+<img src="resources/nirupama-passport.jpeg" alt="Nirupama Singh">
 </div><div class="expert-body"><h3>Nirupama Singh</h3><div class="expert-role">Child Protection Expert • DCPU Varanasi</div>
 <p><strong>20+ years</strong> of hands-on experience with the District Child Protection Unit, Varanasi.</p>
 <div class="expert-tags"><span class="tag">Case Management</span><span class="tag">Child Rights</span><span class="tag">JJ Act</span><span class="tag">POCSO</span><span class="tag">Child Marriage Prevention</span></div>
@@ -114,7 +115,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0;text-align:cente
 </div></article>
 
 <article class="expert-card reveal" data-expertise="livelihood health"><div class="expert-photo">
-<img src="resources/mustaque-ahmad.jpeg" alt="Mustaque Ahmad" onerror="this.src='resources/Mustaque.jpeg'">
+<img src="resources/mustaque-passport.jpeg" alt="Mustaque Ahmad">
 </div><div class="expert-body"><h3>Mustaque Ahmad</h3><div class="expert-role">Director, ROSA SANSTHAN • Livelihood & Health & Nutrition Expert</div>
 <p><strong>30 years</strong> of experience in livelihood and community-based development.</p>
 <div class="expert-tags"><span class="tag">Livelihood</span><span class="tag">Goat Rearing Model</span><span class="tag">Health & Nutrition</span><span class="tag">Community Development</span></div>
@@ -126,7 +127,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0;text-align:cente
 </div></article>
 
 <article class="expert-card reveal" data-expertise="gpdp"><div class="expert-photo">
-<img src="resources/amal.jpeg" alt="Amal Raj Dubey" onerror="this.src='resources/Amal.jpeg'">
+<img src="resources/amal-passport.jpeg" alt="Amal Raj Dubey">
 </div><div class="expert-body"><h3>Amal Raj Dubey</h3><div class="expert-role">Panchayati Raj Consultant | Data & GPDP Expert | SDG Specialist</div>
 <p><strong>5 years</strong> of dedicated experience as Consultant with the Ministry of Panchayati Raj, Government of India.</p>
 <div class="expert-tags"><span class="tag">GPDP</span><span class="tag">PAI</span><span class="tag">SDG Localization</span><span class="tag">Data</span><span class="tag">Panchayati Raj</span></div>
@@ -136,7 +137,7 @@ footer{border-top:1px solid rgba(255,255,255,.1);padding:28px 0;text-align:cente
 </div></article>
 
 <article class="expert-card reveal" data-expertise="systems"><div class="expert-photo">
-<img src="resources/Shanaz.jpeg" alt="Shahnaz Bano" onerror="this.src='resources/Sahnaz.jpeg'">
+<img src="resources/shahnaz-passport.jpeg" alt="Shahnaz Bano">
 </div><div class="expert-body"><h3>Shahnaz Bano</h3><div class="expert-role">Child Protection & Development Sector Expert • Program Management • M&E Specialist</div>
 <p><strong>7+ years</strong> of experience across child protection, education, health and livelihood programmes.</p>
 <div class="expert-tags"><span class="tag">System Strengthening</span><span class="tag">Child Protection</span><span class="tag">Program Management</span><span class="tag">M&E</span><span class="tag">SPSS</span><span class="tag">Kobo</span></div>
