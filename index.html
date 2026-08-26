@@ -3,30 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="description" content="Arpit Srivastava — Social Development Professional | Child Protection | Programme Management | Government Systems Strengthening">
+
 <title>Arpit Srivastava | Social Development Professional</title>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#080b0d;color:#f5f5f5;line-height:1.6;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-.container{width:92%;max-width:1150px;margin:auto}
 
-nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(8,11,13,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}
-.nav-inner{min-height:70px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:800;font-size:18px;letter-spacing:2px}
+html{scroll-behavior:smooth}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#080b0d;
+color:#f5f5f5;
+line-height:1.6;
+overflow-x:hidden
+}
+
+a{text-decoration:none;color:inherit}
+
+.container{
+width:92%;
+max-width:1150px;
+margin:auto
+}
+
+/* NAVIGATION */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+background:rgba(8,11,13,.94);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,.1)
+}
+
+.nav-inner{
+min-height:70px;
+display:flex;
+justify-content:space-between;
+align-items:center
+}
+
+.logo{
+font-weight:800;
+font-size:18px;
+letter-spacing:2px
+}
+
 .logo span{color:#d9a441}
-.nav-links{display:flex;gap:20px;font-size:14px}
+
+.nav-links{
+display:flex;
+gap:20px;
+font-size:14px
+}
+
 .nav-links a{transition:.3s}
+
 .nav-links a:hover{color:#e9bd5e}
+
+/* HERO */
 
 .hero{
 min-height:100vh;
 padding:120px 0 70px;
 display:flex;
 align-items:center;
-background:radial-gradient(circle at 80% 35%,rgba(217,164,65,.2),transparent 35%),linear-gradient(135deg,#07090b,#17120b,#080b0d)
+background:
+radial-gradient(circle at 80% 35%,rgba(217,164,65,.2),transparent 35%),
+linear-gradient(135deg,#07090b,#17120b,#080b0d)
 }
 
 .hero-grid{
@@ -52,10 +102,22 @@ letter-spacing:-3px
 }
 
 h1 span{color:#d9a441}
-.hero-title{font-size:21px;margin-bottom:20px}
-.hero-copy,.lead{color:#aaa;max-width:950px}
 
-.profile{max-width:430px;margin:auto}
+.hero-title{
+font-size:21px;
+margin-bottom:20px
+}
+
+.hero-copy,.lead{
+color:#aaa;
+max-width:950px
+}
+
+.profile{
+max-width:430px;
+margin:auto
+}
+
 .profile img{
 width:100%;
 display:block;
@@ -69,6 +131,8 @@ animation:float 5s ease-in-out infinite
 0%,100%{transform:translateY(0)}
 50%{transform:translateY(-12px)}
 }
+
+/* BUTTONS */
 
 .buttons{
 display:flex;
@@ -87,12 +151,35 @@ transition:.3s
 }
 
 .btn:hover{transform:translateY(-4px)}
-.primary{background:#d9a441;color:#111}
+
+.primary{
+background:#d9a441;
+color:#111
+}
+
 .primary:hover{background:#efc66e}
-.whatsapp{border-color:#25D366;color:#25D366}
-.whatsapp:hover{background:#25D366;color:#111}
-.call{border-color:#4aa3ff;color:#4aa3ff}
-.call:hover{background:#4aa3ff;color:#111}
+
+.whatsapp{
+border-color:#25D366;
+color:#25D366
+}
+
+.whatsapp:hover{
+background:#25D366;
+color:#111
+}
+
+.call{
+border-color:#4aa3ff;
+color:#4aa3ff
+}
+
+.call:hover{
+background:#4aa3ff;
+color:#111
+}
+
+/* GENERAL SECTIONS */
 
 section{padding:90px 0}
 
@@ -102,11 +189,38 @@ line-height:1.1;
 margin:10px 0 15px
 }
 
+/* ABOUT */
+
+.about-text{
+max-width:1000px
+}
+
+.about-text p{
+color:#aaa;
+font-size:17px;
+margin-bottom:20px
+}
+
+.about-highlight{
+margin-top:30px;
+padding:25px;
+border-left:3px solid #d9a441;
+background:#111619;
+border-radius:0 8px 8px 0
+}
+
+.about-highlight p{
+margin:0;
+color:#ddd
+}
+
+/* STATS */
+
 .stats{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:15px;
-margin-top:35px
+margin-top:40px
 }
 
 .stat{
@@ -135,6 +249,8 @@ font-size:12px;
 text-transform:uppercase
 }
 
+/* CARDS */
+
 .cards{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -157,7 +273,9 @@ box-shadow:0 20px 45px rgba(0,0,0,.3)
 }
 
 .card h3{margin-bottom:10px}
+
 .card p{color:#aaa}
+
 .location{
 color:#e9bd5e;
 font-size:13px;
@@ -274,6 +392,8 @@ flex-wrap:wrap;
 margin-top:18px
 }
 
+/* COMMITTEES */
+
 .committee-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -300,6 +420,8 @@ margin-bottom:10px
 }
 
 .committee p{color:#aaa}
+
+/* GALLERY */
 
 .gallery-grid{
 display:grid;
@@ -331,6 +453,8 @@ transform:scale(1.1);
 filter:brightness(1.1)
 }
 
+/* RESOURCES */
+
 .resources{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -354,11 +478,18 @@ border-color:#d9a441
 }
 
 .resource h3{color:#e9bd5e}
-.resource p{color:#aaa;margin:10px 0 20px}
+
+.resource p{
+color:#aaa;
+margin:10px 0 20px
+}
+
 .resource .btn{
 margin-top:auto;
 text-align:center
 }
+
+/* CONTACT */
 
 .contact{
 background:linear-gradient(135deg,#171209,#0c1113)
@@ -378,6 +509,8 @@ gap:15px
 
 .contact-details strong{color:#e9bd5e}
 
+/* FOOTER */
+
 footer{
 border-top:1px solid rgba(255,255,255,.1);
 padding:28px 0;
@@ -385,6 +518,8 @@ text-align:center;
 color:#777;
 font-size:13px
 }
+
+/* LIGHTBOX */
 
 .lightbox{
 position:fixed;
@@ -419,6 +554,8 @@ font-size:28px;
 cursor:pointer
 }
 
+/* ANIMATION */
+
 .reveal{
 opacity:0;
 transform:translateY(35px);
@@ -430,6 +567,8 @@ opacity:1;
 transform:translateY(0)
 }
 
+/* RESPONSIVE */
+
 @media(max-width:900px){
 
 .nav-links{display:none}
@@ -440,6 +579,7 @@ text-align:center
 }
 
 .hero-copy{margin:auto}
+
 .buttons{justify-content:center}
 
 .cards,
@@ -478,11 +618,16 @@ grid-template-columns:1fr
 }
 
 .gallery-item{height:250px}
+
 .hero-title{font-size:18px}
 
 .expert-photo{
 width:120px;
 height:155px
+}
+
+.about-text p{
+font-size:16px
 }
 
 }
@@ -492,6 +637,8 @@ height:155px
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
 <div class="container nav-inner">
 
@@ -500,6 +647,7 @@ ARPIT <span>SRIVASTAVA</span>
 </a>
 
 <div class="nav-links">
+
 <a href="#about">About</a>
 <a href="#expertise">Expertise</a>
 <a href="#experts">Talk to Expert</a>
@@ -507,10 +655,14 @@ ARPIT <span>SRIVASTAVA</span>
 <a href="#gallery">Gallery</a>
 <a href="#resources">Resources</a>
 <a href="#contact">Contact</a>
+
 </div>
 
 </div>
 </nav>
+
+
+<!-- HERO -->
 
 <header class="hero" id="top">
 
@@ -531,12 +683,13 @@ Social Development Professional | Child Protection | Programme Management | Gove
 </div>
 
 <p class="hero-copy">
-Focused on child protection, child rights, programme management, capacity building, government systems strengthening, data management, monitoring and evidence-based programme planning.
+Working towards stronger child protection systems, effective government coordination, capacity building, evidence-based planning and sustainable community development.
 </p>
 
 <div class="buttons">
 
-<a class="btn primary" href="mailto:srivastavaarpit928@gmail.com">
+<a class="btn primary"
+href="mailto:srivastavaarpit928@gmail.com">
 Get in Touch
 </a>
 
@@ -550,13 +703,19 @@ WhatsApp
 
 </div>
 
+
 <div class="profile reveal">
+
 <img src="profile.jpeg" alt="Arpit Srivastava">
+
 </div>
 
 </div>
+
 </header>
 
+
+<!-- ABOUT ME -->
 
 <section id="about">
 
@@ -564,42 +723,128 @@ WhatsApp
 
 <div class="reveal">
 
-<div class="eyebrow">About Me</div>
+<div class="eyebrow">
+About Me
+</div>
 
-<h2>Social Development Professional</h2>
+<h2>
+About Arpit Srivastava
+</h2>
 
-<p class="lead">
-I am a Social Development Professional with <strong>10+ years of professional experience</strong> working across child protection, child rights, government systems strengthening, programme management, training, capacity building, data management and evidence-based programme planning.
+<div class="about-text">
+
+<p>
+I am <strong>Arpit Srivastava</strong>, a Social Development Professional with
+<strong>10+ years of professional experience</strong> working in the areas of
+child protection, child rights, programme management, capacity building,
+government systems strengthening, data management, monitoring and
+evidence-based programme planning.
 </p>
 
-<br>
+<p>
+My professional work focuses on strengthening systems and improving
+coordination between government departments, frontline workers,
+community institutions, civil society organisations and other stakeholders.
+I work towards supporting effective implementation of programmes and
+developing practical solutions for social development challenges.
+</p>
 
-<p class="lead">
-I work closely with government functionaries, frontline workers, community institutions and other stakeholders to strengthen systems, improve coordination and support effective implementation.
+<p>
+Over the years, I have worked across multiple development themes including
+<strong>child protection, child rights, adolescent girls' empowerment,
+education, health and nutrition, migration, livelihoods, community
+development, GPDP and Panchayati Raj.</strong>
+</p>
+
+<p>
+I have experience in designing and facilitating training programmes,
+developing training and resource materials, conducting capacity-building
+sessions and supporting stakeholders with knowledge and practical tools
+for programme implementation.
+</p>
+
+<p>
+My work also includes <strong>data management, monitoring, documentation,
+analysis, reporting and use of evidence for programme planning and
+decision-making.</strong> I believe that reliable data and field-level
+evidence are essential for improving the quality and effectiveness of
+development programmes.
+</p>
+
+<p>
+I have worked closely with government functionaries, district-level
+stakeholders, frontline workers, community institutions and other
+partners to strengthen convergence, referral mechanisms, awareness,
+capacity building and community participation.
+</p>
+
+<p>
+I am particularly interested in strengthening child protection systems,
+promoting child rights, supporting government systems and contributing
+to sustainable, community-led development initiatives.
+</p>
+
+<div class="about-highlight">
+
+<p>
+<strong>My professional objective:</strong><br>
+To contribute to stronger systems, better coordination and sustainable,
+evidence-based solutions that improve outcomes for children, families
+and communities.
 </p>
 
 </div>
+
+</div>
+
+</div>
+
+
+<!-- STATS -->
 
 <div class="stats">
 
 <div class="stat reveal">
+
 <strong>10+</strong>
-<span>Years Experience</span>
+
+<span>
+Years Experience
+</span>
+
 </div>
 
+
 <div class="stat reveal">
+
 <strong>500+</strong>
-<span>Trainings</span>
+
+<span>
+Trainings
+</span>
+
 </div>
 
+
 <div class="stat reveal">
+
 <strong>10,000+</strong>
-<span>People Trained</span>
+
+<span>
+People Trained
+</span>
+
 </div>
 
+
 <div class="stat reveal">
+
 <strong>100+</strong>
-<span>Government Circulars</span>
+
+<span>
+Government Circulars
+</span>
+
 </div>
 
 </div>
@@ -608,6 +853,8 @@ I work closely with government functionaries, frontline workers, community insti
 
 </section>
 
+
+<!-- EXPERTISE -->
 
 <section id="expertise">
 
@@ -619,86 +866,182 @@ I work closely with government functionaries, frontline workers, community insti
 Expertise & Project Experience
 </div>
 
-<h2>Areas of Expertise</h2>
+<h2>
+Areas of Expertise
+</h2>
 
 <p class="lead">
-My experience covers child protection, girls' empowerment, education, health and nutrition, migration, livelihoods, community development and government systems strengthening.
+My professional experience includes child protection, girls' empowerment,
+education, health and nutrition, migration, livelihoods, community
+development and government systems strengthening.
 </p>
 
 </div>
+
 
 <div class="cards">
 
-<div class="card reveal">
-<h3>KAWACH – Child Protection</h3>
-<div class="location">📍 Balrampur, Uttar Pradesh</div>
-<p>
-Strengthening child protection systems through community and institutional mechanisms, prevention of child labour and child marriage, referral systems and government convergence.
-</p>
-</div>
 
 <div class="card reveal">
-<h3>SHASHAKTI – HAUSLA</h3>
-<div class="location">📍 Chandauli, Uttar Pradesh</div>
-<p>
-Adolescent girls' empowerment through life skills, leadership, education, health awareness and community participation.
-</p>
+
+<h3>
+KAWACH – Child Protection
+</h3>
+
+<div class="location">
+📍 Balrampur, Uttar Pradesh
 </div>
 
-<div class="card reveal">
-<h3>Mata Sabri Poshan</h3>
-<div class="location">📍 Chandauli, Uttar Pradesh</div>
 <p>
-Work focused on nutrition awareness, community mobilisation and strengthening coordination around child and maternal nutrition.
+Strengthening child protection systems through community and institutional
+mechanisms, prevention of child labour and child marriage, referral systems
+and government convergence.
 </p>
+
 </div>
 
-<div class="card reveal">
-<h3>Child Protection Systems</h3>
-<div class="location">📍 Uttar Pradesh</div>
-<p>
-Capacity building of stakeholders, child protection committees, referral mechanisms, child rights awareness and government convergence.
-</p>
-</div>
 
 <div class="card reveal">
-<h3>GPDP & Panchayati Raj</h3>
-<div class="location">📍 Government Systems</div>
-<p>
-Supporting participatory planning, Gram Panchayat Development Plans, data use and evidence-based local development.
-</p>
+
+<h3>
+SHASHAKTI – HAUSLA
+</h3>
+
+<div class="location">
+📍 Chandauli, Uttar Pradesh
 </div>
 
-<div class="card reveal">
-<h3>Training & Capacity Building</h3>
-<div class="location">📍 Multiple Districts</div>
 <p>
-Designing and facilitating training programmes for government functionaries, frontline workers, community institutions and other stakeholders.
+Adolescent girls' empowerment through life skills, leadership, education,
+health awareness and community participation.
 </p>
+
 </div>
 
-<div class="card reveal">
-<h3>Data & Evidence</h3>
-<div class="location">📍 Programme Management</div>
-<p>
-Data management, monitoring, documentation, analysis and use of evidence for programme planning and decision making.
-</p>
-</div>
 
 <div class="card reveal">
-<h3>Community Development</h3>
-<div class="location">📍 Field Programmes</div>
-<p>
-Community mobilisation, awareness generation, institution strengthening and convergence with local stakeholders.
-</p>
+
+<h3>
+Mata Sabri Poshan
+</h3>
+
+<div class="location">
+📍 Chandauli, Uttar Pradesh
 </div>
 
-<div class="card reveal">
-<h3>Government Coordination</h3>
-<div class="location">📍 Uttar Pradesh</div>
 <p>
-Coordination with government departments, district administration, police and community-level institutions.
+Work focused on nutrition awareness, community mobilisation and
+strengthening coordination around child and maternal nutrition.
 </p>
+
+</div>
+
+
+<div class="card reveal">
+
+<h3>
+Child Protection Systems
+</h3>
+
+<div class="location">
+📍 Uttar Pradesh
+</div>
+
+<p>
+Capacity building of stakeholders, child protection committees, referral
+mechanisms, child rights awareness and government convergence.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<h3>
+GPDP & Panchayati Raj
+</h3>
+
+<div class="location">
+📍 Government Systems
+</div>
+
+<p>
+Supporting participatory planning, Gram Panchayat Development Plans,
+data use and evidence-based local development.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<h3>
+Training & Capacity Building
+</h3>
+
+<div class="location">
+📍 Multiple Districts
+</div>
+
+<p>
+Designing and facilitating training programmes for government functionaries,
+frontline workers, community institutions and other stakeholders.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<h3>
+Data & Evidence
+</h3>
+
+<div class="location">
+📍 Programme Management
+</div>
+
+<p>
+Data management, monitoring, documentation, analysis and use of evidence
+for programme planning and decision making.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<h3>
+Community Development
+</h3>
+
+<div class="location">
+📍 Field Programmes
+</div>
+
+<p>
+Community mobilisation, awareness generation, institution strengthening
+and convergence with local stakeholders.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<h3>
+Government Coordination
+</h3>
+
+<div class="location">
+📍 Uttar Pradesh
+</div>
+
+<p>
+Coordination with government departments, district administration,
+police and community-level institutions.
+</p>
+
 </div>
 
 </div>
@@ -707,6 +1050,8 @@ Coordination with government departments, district administration, police and co
 
 </section>
 
+
+<!-- TALK TO EXPERT - SEPARATE -->
 
 <section id="experts">
 
@@ -718,10 +1063,13 @@ Coordination with government departments, district administration, police and co
 Direct Professional Support
 </div>
 
-<h2>Talk to Expert</h2>
+<h2>
+Talk to Expert
+</h2>
 
 <p class="lead">
-Select an area below and connect directly with a relevant expert. Each profile contains portfolio highlights and direct contact options.
+Connect directly with experienced professionals for guidance,
+technical discussions, programme support and subject-specific consultation.
 </p>
 
 </div>
@@ -781,7 +1129,9 @@ alt="Nirupama Singh">
 
 <div class="expert-body">
 
-<h3>Nirupama Singh</h3>
+<h3>
+Nirupama Singh
+</h3>
 
 <div class="expert-role">
 Child Protection Expert • DCPU Varanasi
@@ -808,7 +1158,8 @@ Rajpal Award for outstanding contribution to child protection.
 
 <p>
 <strong>Core work:</strong>
-CWC/JJB coordination, rescue, rehabilitation, restoration, community awareness, training and inter-departmental coordination.
+CWC/JJB coordination, rescue, rehabilitation, restoration,
+community awareness, training and inter-departmental coordination.
 </p>
 
 <div class="expert-actions">
@@ -858,7 +1209,9 @@ State Lead – Uttar Pradesh & Madhya Pradesh • Government Partnerships • Ch
 </p>
 
 <p>
-<strong>20+ years</strong> of technical and managerial experience in project management and grant management with non-profits and international development agencies.
+<strong>20+ years</strong> of technical and managerial experience in
+project management and grant management with non-profits and international
+development agencies.
 </p>
 
 <div class="expert-tags">
@@ -874,12 +1227,14 @@ State Lead – Uttar Pradesh & Madhya Pradesh • Government Partnerships • Ch
 
 <p>
 <strong>Core competencies:</strong>
-Project Management, Communications & Campaigns, Government Partnerships, Policy Advocacy and Media Management.
+Project Management, Communications & Campaigns, Government Partnerships,
+Policy Advocacy and Media Management.
 </p>
 
 <p>
 <strong>Issue areas:</strong>
-Child Protection, Anti-Human Trafficking, Livelihood, Social Finance, Disaster Risk Response and Women in Emergencies.
+Child Protection, Anti-Human Trafficking, Livelihood, Social Finance,
+Disaster Risk Response and Women in Emergencies.
 </p>
 
 <div class="expert-actions">
@@ -939,17 +1294,20 @@ Director, ROSA SANSTHAN • Livelihood & Health & Nutrition Expert
 
 <p>
 <strong>Livelihood:</strong>
-Three decades of hands-on experience strengthening rural household economic resilience through participatory, community-driven models.
+Three decades of hands-on experience strengthening rural household
+economic resilience through participatory, community-driven models.
 </p>
 
 <p>
 <strong>Goat Rearing:</strong>
-Expertise in designing, training and implementing goat-based livelihood models for small and marginal farmers and landless families.
+Expertise in designing, training and implementing goat-based livelihood
+models for small and marginal farmers and landless families.
 </p>
 
 <p>
 <strong>Health & Nutrition:</strong>
-Contributions in maternal and child health, malnutrition reduction and community-based nutrition programmes.
+Contributions in maternal and child health, malnutrition reduction
+and community-based nutrition programmes.
 </p>
 
 <p>
@@ -1000,7 +1358,8 @@ Panchayati Raj Consultant | Data & GPDP Expert | SDG Specialist
 </div>
 
 <p>
-<strong>5 years</strong> of dedicated experience as Consultant with the Ministry of Panchayati Raj, Government of India.
+<strong>5 years</strong> of dedicated experience as Consultant with
+the Ministry of Panchayati Raj, Government of India.
 </p>
 
 <div class="expert-tags">
@@ -1014,11 +1373,14 @@ Panchayati Raj Consultant | Data & GPDP Expert | SDG Specialist
 </div>
 
 <p>
-Strong expertise in Panchayat Advancement Index (PAI), preparation, monitoring and review of GPDP, SDG localization, data collection, validation, analysis, dashboards and reporting.
+Strong expertise in Panchayat Advancement Index (PAI), preparation,
+monitoring and review of GPDP, SDG localization, data collection,
+validation, analysis, dashboards and reporting.
 </p>
 
 <p>
-Also brings knowledge of child protection systems and their integration into local governance and planning.
+Also brings knowledge of child protection systems and their integration
+into local governance and planning.
 </p>
 
 <div class="expert-actions">
@@ -1064,7 +1426,8 @@ Child Protection & Development Sector Expert • Program Management • M&E Spec
 </div>
 
 <p>
-<strong>7+ years</strong> of experience across child protection, education, health and livelihood programmes.
+<strong>7+ years</strong> of experience across child protection,
+education, health and livelihood programmes.
 </p>
 
 <div class="expert-tags">
@@ -1079,16 +1442,21 @@ Child Protection & Development Sector Expert • Program Management • M&E Spec
 </div>
 
 <p>
-Expertise includes project management, stakeholder engagement, monitoring frameworks, data analysis, research-based advocacy and capacity building with government agencies, NGOs and communities.
+Expertise includes project management, stakeholder engagement,
+monitoring frameworks, data analysis, research-based advocacy and
+capacity building with government agencies, NGOs and communities.
 </p>
 
 <p>
-She has worked with WCD, Education, UPSRLM, Health, CWC and Anti Human Trafficking Units and has designed training modules for DCPU, CWPO, SMCs, PRIs and CPCs.
+She has worked with WCD, Education, UPSRLM, Health, CWC and Anti Human
+Trafficking Units and has designed training modules for DCPU, CWPO,
+SMCs, PRIs and CPCs.
 </p>
 
 <p>
 <strong>Core strengths:</strong>
-SPSS, MS Excel, Kobo Toolbox, MIS, survey design, data validation, reporting and quality assurance.
+SPSS, MS Excel, Kobo Toolbox, MIS, survey design, data validation,
+reporting and quality assurance.
 </p>
 
 <div class="expert-actions">
@@ -1117,6 +1485,8 @@ WhatsApp
 </section>
 
 
+<!-- GOVERNMENT COMMITTEES -->
+
 <section id="committees">
 
 <div class="container">
@@ -1132,12 +1502,15 @@ Committee Membership
 </h2>
 
 <p class="lead">
-Member/supporting member in government-linked committees and task forces related to child protection, workplace safety and social issues.
+Member/supporting member in government-linked committees and task forces
+related to child protection, workplace safety and social issues.
 </p>
 
 </div>
 
+
 <div class="committee-grid">
+
 
 <div class="committee reveal">
 
@@ -1146,10 +1519,12 @@ Task Force – Child Labour
 </h3>
 
 <p>
-Member of the government task force working towards prevention, identification and response to child labour.
+Member of the government task force working towards prevention,
+identification and response to child labour.
 </p>
 
 </div>
+
 
 <div class="committee reveal">
 
@@ -1158,10 +1533,12 @@ Task Force – Child Marriage
 </h3>
 
 <p>
-Member/supporting member in mechanisms focused on prevention and response to child marriage.
+Member/supporting member in mechanisms focused on prevention
+and response to child marriage.
 </p>
 
 </div>
+
 
 <div class="committee reveal">
 
@@ -1170,7 +1547,8 @@ Vishakha Samiti
 </h3>
 
 <p>
-Member of the committee dealing with workplace safety, prevention of sexual harassment and institutional awareness.
+Member of the committee dealing with workplace safety,
+prevention of sexual harassment and institutional awareness.
 </p>
 
 </div>
@@ -1181,6 +1559,8 @@ Member of the committee dealing with workplace safety, prevention of sexual hara
 
 </section>
 
+
+<!-- GALLERY -->
 
 <section id="gallery">
 
@@ -1197,44 +1577,55 @@ Field Work & Activities
 </h2>
 
 <p class="lead">
-Selected moments from professional engagements, trainings, government coordination meetings, awareness programmes and field activities.
+Selected moments from professional engagements, trainings,
+government coordination meetings, awareness programmes and field activities.
 </p>
 
 </div>
 
+
 <div class="gallery-grid">
+
 
 <div class="gallery-item reveal">
 <img src="1704942335413.jpg" alt="Arpit Srivastava activity">
 </div>
 
+
 <div class="gallery-item reveal">
 <img src="1739446058978.jpg" alt="Arpit Srivastava activity">
 </div>
+
 
 <div class="gallery-item reveal">
 <img src="1743402101143.jpg" alt="Arpit Srivastava activity">
 </div>
 
+
 <div class="gallery-item reveal">
 <img src="1758335082413.jpg" alt="Arpit Srivastava activity">
 </div>
+
 
 <div class="gallery-item reveal">
 <img src="1758909439720.jpg" alt="Arpit Srivastava activity">
 </div>
 
+
 <div class="gallery-item reveal">
 <img src="arpit 2.jpeg" alt="Arpit Srivastava activity">
 </div>
+
 
 <div class="gallery-item reveal">
 <img src="arpit 3.jpeg" alt="Arpit Srivastava activity">
 </div>
 
+
 <div class="gallery-item reveal">
 <img src="arpit 4.jpg" alt="Arpit Srivastava activity">
 </div>
+
 
 <div class="gallery-item reveal">
 <img src="arpit.jpeg" alt="Arpit Srivastava activity">
@@ -1246,6 +1637,8 @@ Selected moments from professional engagements, trainings, government coordinati
 
 </section>
 
+
+<!-- RESOURCES -->
 
 <section id="resources">
 
@@ -1267,7 +1660,9 @@ Selected child protection, community development, training and programme resourc
 
 </div>
 
+
 <div class="resources">
+
 
 <div class="resource reveal">
 
@@ -1389,6 +1784,8 @@ Open PDF
 </section>
 
 
+<!-- CONTACT -->
+
 <section id="contact" class="contact">
 
 <div class="container contact-grid">
@@ -1404,7 +1801,8 @@ Let's Connect
 </h2>
 
 <p class="lead">
-For collaboration, training, child protection resources, programme support, capacity building or professional discussions, feel free to connect.
+For collaboration, training, child protection resources, programme
+support, capacity building or professional discussions, feel free to connect.
 </p>
 
 <div class="buttons">
@@ -1424,24 +1822,39 @@ WhatsApp Me
 
 </div>
 
+
 <div class="contact-details reveal">
 
 <div>
+
 <strong>Email</strong>
+
 <br>
+
 srivastavaarpit928@gmail.com
+
 </div>
 
+
 <div>
+
 <strong>WhatsApp</strong>
+
 <br>
+
 +91 9005841098
+
 </div>
 
+
 <div>
+
 <strong>Location</strong>
+
 <br>
+
 Uttar Pradesh, India
+
 </div>
 
 </div>
@@ -1451,12 +1864,20 @@ Uttar Pradesh, India
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
+
 <div class="container">
+
 © 2026 Arpit Srivastava. All Rights Reserved.
+
 </div>
+
 </footer>
 
+
+<!-- LIGHTBOX -->
 
 <div class="lightbox" id="lightbox">
 
@@ -1469,18 +1890,21 @@ Uttar Pradesh, India
 </div>
 
 
+<!-- JAVASCRIPT -->
+
 <script>
+
+/* SCROLL REVEAL */
 
 const reveals=document.querySelectorAll(".reveal");
 
 const observer=new IntersectionObserver(
 entries=>{
-entries.forEach(
-entry=>{
-if(entry.isIntersecting)
-entry.target.classList.add("show")
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
 }
-)
+});
 },
 {threshold:.12}
 );
@@ -1488,7 +1912,10 @@ entry.target.classList.add("show")
 reveals.forEach(el=>observer.observe(el));
 
 
+/* EXPERT FILTER */
+
 const filter=document.getElementById("expertFilter");
+
 const cards=document.querySelectorAll(".expert-card");
 
 filter.addEventListener("change",function(){
@@ -1509,7 +1936,10 @@ categories.includes(selected)
 });
 
 
+/* GALLERY LIGHTBOX */
+
 const lightbox=document.getElementById("lightbox");
+
 const lightboxImage=document.getElementById("lightboxImage");
 
 document.querySelectorAll(".gallery-item img").forEach(img=>{
@@ -1517,6 +1947,7 @@ document.querySelectorAll(".gallery-item img").forEach(img=>{
 img.addEventListener("click",()=>{
 
 lightboxImage.src=img.src;
+
 lightbox.classList.add("active");
 
 });
@@ -1527,6 +1958,7 @@ lightbox.classList.add("active");
 function closeLightbox(){
 
 lightbox.classList.remove("active");
+
 lightboxImage.src="";
 
 }
@@ -1534,16 +1966,22 @@ lightboxImage.src="";
 
 lightbox.addEventListener("click",e=>{
 
-if(e.target===lightbox)
+if(e.target===lightbox){
+
 closeLightbox();
+
+}
 
 });
 
 
 document.addEventListener("keydown",e=>{
 
-if(e.key==="Escape")
+if(e.key==="Escape"){
+
 closeLightbox();
+
+}
 
 });
 
