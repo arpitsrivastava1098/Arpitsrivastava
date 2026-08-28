@@ -866,6 +866,38 @@ transform:scale(1.08);
 }
 
 </style>
+
+<style id="home-text-animation">
+.home-text-animate{
+  animation: homeTextReveal 1.2s cubic-bezier(.22,1,.36,1) both;
+}
+.home-text-animate-delay{
+  animation: homeTextReveal 1.2s cubic-bezier(.22,1,.36,1) .28s both;
+}
+.home-text-animate-soft{
+  animation: homeTextReveal 1.2s cubic-bezier(.22,1,.36,1) .5s both;
+}
+@keyframes homeTextReveal{
+  from{
+    opacity:0;
+    transform:translateY(22px);
+    filter:blur(4px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+    filter:blur(0);
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  .home-text-animate,
+  .home-text-animate-delay,
+  .home-text-animate-soft{
+    animation:none;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -943,9 +975,9 @@ Welcome to India's first platform built entirely around child protection — a s
 <div class="home-contact contact">
 <div class="container contact-grid">
 <div class="reveal">
-<div class="eyebrow">Get In Touch</div>
-<h2>Let's Connect</h2>
-<p class="lead">For collaboration, training, child protection resources, programme support, capacity building, consultancy or professional discussions, feel free to connect.</p>
+<div class="eyebrow home-text-animate">Get In Touch</div>
+<h2 class="home-text-animate-delay">Let's Connect</h2>
+<p class="lead home-text-animate-soft">For collaboration, training, child protection resources, programme support, capacity building, consultancy or professional discussions, feel free to connect.</p>
 <div class="buttons">
 <a class="btn primary" href="mailto:srivastavaarpit928@gmail.com">Email Me</a>
 <a class="btn whatsapp" href="https://wa.me/919005841098?text=Hello%20Arpit%20Srivastava" target="_blank">WhatsApp Me</a>
@@ -968,6 +1000,11 @@ Welcome to India's first platform built entirely around child protection — a s
 <section id="about" class="tab-section">
 
 <div class="container">
+<div class="about-photo reveal" style="margin:0 0 35px 0;display:flex;justify-content:center;">
+  <img src="profile.jpg.jpeg" alt="Arpit Srivastava"
+       style="width:100%;max-width:520px;height:auto;display:block;border-radius:18px;border:1px solid rgba(255,255,255,.15);box-shadow:0 20px 50px rgba(0,0,0,.35);">
+</div>
+
 <div class="about-photo reveal">
 </div>
 
