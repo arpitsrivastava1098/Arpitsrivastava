@@ -735,6 +735,20 @@ box-shadow:0 0 25px rgba(217,164,65,.25);
 }
 }
 
+/* TAB / SINGLE-SECTION VIEW */
+.hero,
+section{
+  display:none;
+}
+
+.hero.active{
+  display:flex;
+}
+
+section.active{
+  display:block;
+}
+
 /* RESPONSIVE */
 
 @media(max-width:1000px){
@@ -879,7 +893,7 @@ ARPIT <span>SRIVASTAVA</span>
 
 <!-- HOME -->
 
-<header class="hero" id="top">
+<header class="hero active" id="top">
 
 <div class="container hero-grid">
 
@@ -932,7 +946,7 @@ WhatsApp
 
 <!-- ABOUT ARPIT SRIVASTAVA -->
 
-<section id="about">
+<section id="about" class="tab-section">
 
 <div class="container">
 
@@ -1107,7 +1121,7 @@ police and community-level institutions.
 
 <!-- TALK TO EXPERT -->
 
-<section id="experts">
+<section id="experts" class="tab-section">
 
 <div class="container">
 
@@ -1589,7 +1603,7 @@ WhatsApp
 
 <!-- CONSULTANCY -->
 
-<section id="consultancy" class="consultancy">
+<section id="consultancy" class="tab-section"consultancy"">
 
 <div class="container">
 
@@ -1770,7 +1784,7 @@ WhatsApp
 
 <!-- COMMITTEES -->
 
-<section id="committees">
+<section id="committees" class="tab-section">
 
 <div class="container">
 
@@ -1844,7 +1858,7 @@ prevention of sexual harassment and institutional awareness.
 
 <!-- GALLERY -->
 
-<section id="gallery">
+<section id="gallery" class="tab-section">
 
 <div class="container">
 
@@ -1915,7 +1929,7 @@ and field activities.
 
 <!-- RESOURCES -->
 
-<section id="resources">
+<section id="resources" class="tab-section">
 
 <div class="container">
 
@@ -2062,7 +2076,7 @@ Open PDF
 
 <!-- CONTACT -->
 
-<section id="contact" class="contact">
+<section id="contact" class="tab-section"contact"">
 
 <div class="container contact-grid">
 
@@ -2174,6 +2188,43 @@ title="Chat on WhatsApp">
 
 
 <script>
+
+/* SINGLE-PAGE TAB NAVIGATION */
+const tabLinks=document.querySelectorAll('.nav-links a, .hero a[href^="#"]');
+const hero=document.getElementById('top');
+const tabSections=document.querySelectorAll('section.tab-section');
+
+function showTab(id, updateHash=true){
+  const targetId=id || 'top';
+  hero.classList.toggle('active', targetId==='top');
+  tabSections.forEach(section=>{
+    section.classList.toggle('active', section.id===targetId);
+  });
+
+  if(updateHash){
+    history.replaceState(null, '', '#'+targetId);
+  }
+
+  window.scrollTo({top:0, behavior:'smooth'});
+
+  // Re-trigger reveal animations for the newly visible tab.
+  document.querySelectorAll('.active .reveal').forEach(el=>{
+    el.classList.remove('show');
+    requestAnimationFrame(()=>el.classList.add('show'));
+  });
+}
+
+tabLinks.forEach(link=>{
+  link.addEventListener('click', function(e){
+    const href=this.getAttribute('href');
+    if(!href || !href.startsWith('#')) return;
+    e.preventDefault();
+    showTab(href.substring(1));
+  });
+});
+
+const initialHash=window.location.hash.replace('#','');
+showTab(initialHash || 'top', false);
 
 /* REVEAL ANIMATION */
 
