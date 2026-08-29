@@ -591,6 +591,117 @@ transform:scale(1.1);
 filter:brightness(1.1);
 }
 
+/* REVIEWS */
+
+.reviews-summary{
+display:flex;
+align-items:center;
+gap:22px;
+background:#111619;
+border:1px solid rgba(217,164,65,.25);
+border-radius:12px;
+padding:22px 26px;
+margin-top:35px;
+flex-wrap:wrap;
+}
+
+.reviews-avg-num{
+font-size:44px;
+font-weight:800;
+color:#e9bd5e;
+line-height:1;
+}
+
+.reviews-avg-stars{
+color:#e9bd5e;
+font-size:18px;
+letter-spacing:2px;
+margin-top:6px;
+}
+
+.reviews-avg-count{
+color:#999;
+font-size:13px;
+margin-top:4px;
+}
+
+.reviews-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+margin-top:25px;
+}
+
+.review-card{
+background:linear-gradient(145deg,#151a1d,#0e1214);
+border:1px solid rgba(255,255,255,.09);
+padding:22px;
+border-radius:10px;
+transition:.35s;
+}
+
+.review-card:hover{
+transform:translateY(-6px);
+border-color:rgba(217,164,65,.5);
+}
+
+.review-stars{
+color:#e9bd5e;
+font-size:15px;
+letter-spacing:2px;
+margin-bottom:10px;
+}
+
+.review-card p{
+color:#bbb;
+font-size:14px;
+margin-bottom:12px;
+}
+
+.review-name{
+color:#e9bd5e;
+font-weight:bold;
+font-size:14px;
+}
+
+.review-form-box{
+margin-top:40px;
+background:#111619;
+border:1px solid rgba(217,164,65,.25);
+border-radius:12px;
+padding:28px;
+max-width:560px;
+}
+
+.review-form-box h3{
+color:#e9bd5e;
+margin-bottom:15px;
+}
+
+.star-select{
+display:flex;
+gap:8px;
+font-size:30px;
+margin:6px 0 5px;
+}
+
+.star-select span{
+cursor:pointer;
+color:#555;
+transition:.2s;
+}
+
+.star-select span.active{
+color:#e9bd5e;
+text-shadow:0 0 12px rgba(233,189,94,.6);
+}
+
+.review-note{
+color:#999;
+font-size:12px;
+margin-top:12px;
+}
+
 /* RESOURCES */
 
 .resources{
@@ -976,6 +1087,10 @@ grid-template-columns:1fr 1fr;
 grid-template-columns:1fr 1fr;
 }
 
+.reviews-grid{
+grid-template-columns:1fr 1fr;
+}
+
 .expert-grid{
 grid-template-columns:1fr;
 }
@@ -1026,6 +1141,7 @@ padding:65px 0;
 .resources,
 .committee-grid,
 .gallery-grid,
+.reviews-grid,
 .consultancy-grid{
 grid-template-columns:1fr;
 }
@@ -1168,6 +1284,7 @@ ARPIT <span>SRIVASTAVA</span>
 <a href="#experts">Talk to Expert</a>
 <a href="#consultancy">Consultancy</a>
 <a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
 <a href="#resources">Resources</a>
 
 
@@ -2424,6 +2541,112 @@ Badhte Bacche
 </section>
 
 
+<!-- REVIEWS -->
+
+<section id="reviews" class="tab-section">
+
+<div class="container">
+
+<div class="reveal">
+
+<div class="eyebrow">
+Client Feedback
+</div>
+
+<h2>
+Reviews & Ratings
+</h2>
+
+<p class="lead">
+See what people say after working, training or coordinating
+with me — and share your own experience below.
+</p>
+
+</div>
+
+<div class="reviews-summary reveal">
+
+<div>
+<div class="reviews-avg-num" id="reviewsAvgNum">5.0</div>
+<div class="reviews-avg-stars" id="reviewsAvgStars">★★★★★</div>
+<div class="reviews-avg-count" id="reviewsAvgCount">Based on 5 reviews</div>
+</div>
+
+</div>
+
+<div class="reviews-grid" id="reviewsGrid">
+
+<div class="review-card reveal">
+<div class="review-stars">★★★★★</div>
+<p>Very structured guidance on child protection systems, easy to follow and practical for fieldwork.</p>
+<div class="review-name">Field Officer, UP</div>
+</div>
+
+<div class="review-card reveal">
+<div class="review-stars">★★★★★</div>
+<p>Excellent support during module development and training coordination. Highly professional.</p>
+<div class="review-name">NGO Programme Manager</div>
+</div>
+
+<div class="review-card reveal">
+<div class="review-stars">★★★★★</div>
+<p>Clear communication and deep knowledge of government systems. Would recommend for consultancy.</p>
+<div class="review-name">CWPC Member</div>
+</div>
+
+<div class="review-card reveal">
+<div class="review-stars">★★★★★</div>
+<p>Bahut hi supportive aur knowledgeable — training session ke baad hamari team ka kaam kaafi asaan ho gaya.</p>
+<div class="review-name">Anganwadi Supervisor</div>
+</div>
+
+<div class="review-card reveal">
+<div class="review-stars">★★★★★</div>
+<p>Reporting aur documentation me diye gaye inputs bahut practical aur time par mile. Great to work with.</p>
+<div class="review-name">District Programme Coordinator</div>
+</div>
+
+</div>
+
+<div class="review-form-box reveal">
+
+<h3>Add Your Review</h3>
+
+<label>Your Rating</label>
+<div class="star-select" id="starSelect">
+<span data-val="1">★</span>
+<span data-val="2">★</span>
+<span data-val="3">★</span>
+<span data-val="4">★</span>
+<span data-val="5">★</span>
+</div>
+
+<form class="contact-form" onsubmit="submitReview(event)">
+
+<label>Your Name</label>
+<input type="text" id="reviewName" placeholder="Enter your name" required>
+
+<label>Your Review</label>
+<textarea id="reviewText" placeholder="Share your experience..." required></textarea>
+
+<button class="btn primary" type="submit">
+Submit Review
+</button>
+
+</form>
+
+<p class="review-note">
+Your review is sent on WhatsApp for approval and will be added
+to this section once published.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
 <!-- RESOURCES -->
 
 <section id="resources" class="tab-section">
@@ -2767,6 +2990,65 @@ wrap.innerHTML=
 
 card.onclick=null;
 card.style.cursor="default";
+
+}
+
+
+/* REVIEWS & RATINGS */
+
+let selectedRating=5;
+
+const starEls=document.querySelectorAll("#starSelect span");
+
+function paintStars(val){
+starEls.forEach(s=>{
+s.classList.toggle("active", Number(s.dataset.val)<=val);
+});
+}
+
+starEls.forEach(s=>{
+s.addEventListener("click",()=>{
+selectedRating=Number(s.dataset.val);
+paintStars(selectedRating);
+});
+});
+
+paintStars(selectedRating);
+
+function submitReview(event){
+
+event.preventDefault();
+
+const name=document.getElementById("reviewName").value;
+const reviewText=document.getElementById("reviewText").value;
+const stars="★".repeat(selectedRating)+"☆".repeat(5-selectedRating);
+
+/* Show it instantly on this visitor's page (pending approval) */
+const grid=document.getElementById("reviewsGrid");
+const card=document.createElement("div");
+card.className="review-card reveal show";
+card.innerHTML=
+'<div class="review-stars">'+stars+'</div>'+
+'<p>'+reviewText.replace(/</g,"&lt;")+'</p>'+
+'<div class="review-name">'+name.replace(/</g,"&lt;")+' (pending approval)</div>';
+grid.prepend(card);
+
+/* Send full details on WhatsApp for approval */
+const text=
+"Hello Arpit Srivastava,%0A%0A"+
+"New Website Review:%0A"+
+"Rating: "+selectedRating+"/5%0A"+
+"Name: "+encodeURIComponent(name)+
+"%0AReview: "+encodeURIComponent(reviewText);
+
+window.open(
+"https://wa.me/919005841098?text="+text,
+"_blank"
+);
+
+event.target.reset();
+selectedRating=5;
+paintStars(selectedRating);
 
 }
 
