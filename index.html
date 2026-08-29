@@ -866,100 +866,19 @@ transform:scale(1.08);
 }
 
 
-/* ===== MOBILE NAV + COMPACT HOME OVERVIEW ===== */
-.nav-toggle{
-  display:none;
-  width:44px;height:44px;border:1px solid rgba(217,164,65,.55);
-  border-radius:9px;background:#111619;color:#e9bd5e;
-  font-size:23px;cursor:pointer;align-items:center;justify-content:center;
-}
-
-.home-overview{
-  margin-top:30px;
-  padding:22px;
-  border:1px solid rgba(217,164,65,.25);
-  border-radius:16px;
-  background:linear-gradient(145deg,rgba(21,26,29,.94),rgba(14,18,20,.94));
-  box-shadow:0 18px 45px rgba(0,0,0,.22);
-  position:relative;
-  overflow:hidden;
-}
-.home-overview:before{
-  content:"";
-  position:absolute;inset:-2px;
-  background:linear-gradient(90deg,transparent,rgba(217,164,65,.14),transparent);
-  transform:translateX(-100%);
-  animation:homeSweep 4s infinite;
-}
-@keyframes homeSweep{to{transform:translateX(100%)}}
-.home-overview > *{position:relative;z-index:1}
-.home-overview h3{color:#e9bd5e;font-size:20px;margin-bottom:7px}
-.home-overview p{color:#aaa;font-size:14px}
-.home-pills{
-  display:flex;flex-wrap:wrap;gap:8px;margin-top:15px;
-}
-.home-pill{
-  border:1px solid rgba(217,164,65,.28);
-  border-radius:999px;padding:7px 11px;
-  color:#ddd;background:#0c1113;font-size:12px;
-  animation:pillFloat 3.5s ease-in-out infinite;
-}
-.home-pill:nth-child(2){animation-delay:.3s}.home-pill:nth-child(3){animation-delay:.6s}
-.home-pill:nth-child(4){animation-delay:.9s}.home-pill:nth-child(5){animation-delay:1.2s}
-.home-pill:nth-child(6){animation-delay:1.5s}
+/* ===== MOBILE MENU + HOME OVERVIEW ===== */
+.nav-toggle{display:none;width:44px;height:44px;border:1px solid rgba(217,164,65,.55);border-radius:9px;background:#111619;color:#e9bd5e;font-size:23px;cursor:pointer;align-items:center;justify-content:center}
+.home-overview{margin:28px auto;padding:22px;border:1px solid rgba(217,164,65,.28);border-radius:16px;background:linear-gradient(145deg,rgba(21,26,29,.96),rgba(14,18,20,.96));box-shadow:0 18px 45px rgba(0,0,0,.24);overflow:hidden;position:relative}
+.home-overview:before{content:"";position:absolute;inset:0;left:-80%;width:55%;background:linear-gradient(90deg,transparent,rgba(217,164,65,.13),transparent);transform:skewX(-20deg);animation:homeSweep 4.5s infinite}
+@keyframes homeSweep{0%{left:-80%}100%{left:130%}}
+.home-overview>*{position:relative;z-index:1}.home-overview h3{margin:0 0 8px;color:#e9bd5e;font-size:21px}.home-overview p{margin:0;color:#aaa;font-size:14px;line-height:1.65}
+.home-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.home-pill{border:1px solid rgba(217,164,65,.3);border-radius:999px;padding:7px 11px;color:#ddd;background:#0c1113;font-size:12px;animation:pillFloat 3.5s ease-in-out infinite}
+.home-pill:nth-child(2){animation-delay:.3s}.home-pill:nth-child(3){animation-delay:.6s}.home-pill:nth-child(4){animation-delay:.9s}.home-pill:nth-child(5){animation-delay:1.2s}.home-pill:nth-child(6){animation-delay:1.5s}
 @keyframes pillFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
-
-.home-stat-strip{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px;
-}
-.home-mini-stat{
-  padding:13px 8px;text-align:center;border-radius:10px;
-  background:#0b0f11;border:1px solid rgba(255,255,255,.08);
-}
-.home-mini-stat strong{display:block;color:#e9bd5e;font-size:21px}
-.home-mini-stat span{display:block;color:#999;font-size:10px;text-transform:uppercase}
-
-.home-explore-title{
-  text-align:center;margin:34px 0 14px;color:#e9bd5e;
-  font-size:18px;font-weight:700;
-}
-.home-explore{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:11px;
-}
-.home-explore a{
-  min-height:60px;display:flex;align-items:center;justify-content:center;
-  text-align:center;padding:12px;border-radius:10px;
-  border:1px solid rgba(217,164,65,.3);
-  background:linear-gradient(145deg,#151a1d,#0e1214);
-  font-weight:700;font-size:13px;transition:.3s;
-}
-.home-explore a:hover{transform:translateY(-4px);border-color:#d9a441;color:#e9bd5e}
-
-@media(max-width:1000px){
-  .nav-inner{position:relative}
-  .nav-toggle{display:flex}
-  .nav-links{
-    display:flex;position:absolute;top:70px;left:0;width:100%;
-    flex-direction:column;gap:7px;padding:12px 4%;
-    background:rgba(8,11,13,.98);backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(255,255,255,.12);
-    max-height:0;overflow:hidden;opacity:0;pointer-events:none;
-    transition:max-height .35s ease,opacity .25s ease;
-  }
-  nav.mobile-open .nav-links{max-height:430px;opacity:1;pointer-events:auto}
-  .nav-links a{
-    width:100%;padding:11px 14px;border:1px solid rgba(255,255,255,.08);
-    border-radius:8px;background:#111619;font-size:14px;
-  }
-}
-@media(max-width:560px){
-  .home-overview{padding:18px;margin-top:22px}
-  .home-overview h3{font-size:18px}
-  .home-overview p{font-size:13px}
-  .home-stat-strip{grid-template-columns:repeat(2,1fr)}
-  .home-explore{grid-template-columns:repeat(2,1fr)}
-  .home-explore a{min-height:55px;font-size:12px}
-}
+.home-stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}.home-mini-stat{padding:13px 8px;text-align:center;border-radius:10px;background:#0b0f11;border:1px solid rgba(255,255,255,.08)}.home-mini-stat strong{display:block;color:#e9bd5e;font-size:21px}.home-mini-stat span{display:block;color:#999;font-size:10px;text-transform:uppercase}
+.home-explore-title{text-align:center;margin:30px 0 14px;color:#e9bd5e;font-size:18px;font-weight:700}.home-explore{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.home-explore a{min-height:58px;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;border-radius:10px;border:1px solid rgba(217,164,65,.3);background:linear-gradient(145deg,#151a1d,#0e1214);font-weight:700;font-size:13px;transition:.3s}.home-explore a:hover{transform:translateY(-4px);border-color:#d9a441;color:#e9bd5e}
+@media(max-width:1000px){.nav-inner{position:relative}.nav-toggle{display:flex}.nav-links{display:flex;position:absolute;top:70px;left:0;width:100%;flex-direction:column;gap:7px;padding:12px 4%;background:rgba(8,11,13,.98);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.12);max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:max-height .35s ease,opacity .25s ease}.nav.mobile-open .nav-links{max-height:430px;opacity:1;pointer-events:auto}.nav-links a{width:100%;padding:11px 14px;border:1px solid rgba(255,255,255,.08);border-radius:8px;background:#111619;font-size:14px}}
+@media(max-width:560px){.home-overview{padding:18px;margin:22px 0}.home-overview h3{font-size:18px}.home-overview p{font-size:13px}.home-stat-strip{grid-template-columns:repeat(2,1fr)}.home-explore{grid-template-columns:repeat(2,1fr)}.home-explore a{min-height:55px;font-size:12px}}
 
 </style>
 
@@ -1045,38 +964,9 @@ Strengthening Child Protection Across India
 
 <p class="hero-copy">
 
-India's first platform built entirely around child protection — bringing practical knowledge, expert support, training resources and professional consultancy together in one place.
+Welcome to India's first platform built entirely around child protection — a space to learn, read practical modules, talk directly to sector experts, and access consultancy support for training, programme management and government systems strengthening. Backed by over a decade of on-ground experience working with government departments, frontline workers and communities across India, this platform brings field-tested knowledge and practical solutions directly to those who need them — social workers, government functionaries, NGOs, students and researchers, and anyone committed to child rights and safety. Alongside child protection, the platform also brings together the allied areas that shape a child's wellbeing — Livelihood, Education, Skill Development, Girls' Empowerment, Health & Nutrition, and Monitoring, Evaluation & Learning (MEL) — with dedicated consultancy support available for organisations and institutions working across the social development sector. Whether you're looking to strengthen your understanding of child protection laws and mechanisms, build the capacity of your team, or partner on a programme, this platform is designed to be your trusted starting point.
 
 </p>
-
-
-<div class="home-overview reveal">
-  <h3>What You’ll Find Here</h3>
-  <p>Explore child protection resources, expert consultation, professional services, field work, training modules and practical development knowledge.</p>
-  <div class="home-pills">
-    <span class="home-pill">🛡️ Child Protection</span>
-    <span class="home-pill">👥 Talk to Experts</span>
-    <span class="home-pill">🎓 Training & Capacity Building</span>
-    <span class="home-pill">📊 Data & MIS</span>
-    <span class="home-pill">🏛️ Government Systems</span>
-    <span class="home-pill">📚 Modules & Resources</span>
-  </div>
-  <div class="home-stat-strip">
-    <div class="home-mini-stat"><strong>10+</strong><span>Years Experience</span></div>
-    <div class="home-mini-stat"><strong>500+</strong><span>Trainings</span></div>
-    <div class="home-mini-stat"><strong>10K+</strong><span>People Trained</span></div>
-    <div class="home-mini-stat"><strong>100+</strong><span>Govt. Circulars</span></div>
-  </div>
-</div>
-
-<div class="home-explore-title">Explore the Website</div>
-<div class="home-explore">
-  <a href="#about">👤 About Me</a>
-  <a href="#experts">💬 Talk to Expert</a>
-  <a href="#consultancy">💼 Consultancy</a>
-  <a href="#gallery">📸 Gallery</a>
-  <a href="#resources">📚 Resources</a>
-</div>
 
 <div class="buttons">
 
@@ -1095,6 +985,36 @@ India's first platform built entirely around child protection — bringing pract
        style="width:100%;max-width:430px;height:auto;display:block;border-radius:18px;border:1px solid rgba(255,255,255,.15);box-shadow:0 25px 60px rgba(0,0,0,.45);">
 </div>
 
+</div>
+
+<!-- HOME OVERVIEW -->
+<div class="container">
+<div class="home-overview reveal">
+<h3>What You’ll Find Here</h3>
+<p>Explore child protection knowledge, sector experts, professional consultancy, training resources, field activities and practical development solutions — all in one platform.</p>
+<div class="home-pills">
+<span class="home-pill">🛡️ Child Protection</span>
+<span class="home-pill">💬 Talk to Experts</span>
+<span class="home-pill">🎓 Training & Capacity Building</span>
+<span class="home-pill">📊 Data & MIS</span>
+<span class="home-pill">🏛️ Government Systems</span>
+<span class="home-pill">📚 Modules & Resources</span>
+</div>
+<div class="home-stat-strip">
+<div class="home-mini-stat"><strong>10+</strong><span>Years Experience</span></div>
+<div class="home-mini-stat"><strong>500+</strong><span>Trainings</span></div>
+<div class="home-mini-stat"><strong>10K+</strong><span>People Trained</span></div>
+<div class="home-mini-stat"><strong>100+</strong><span>Govt. Circulars</span></div>
+</div>
+</div>
+<div class="home-explore-title">Explore the Website</div>
+<div class="home-explore">
+<a href="#about">👤 About Me</a>
+<a href="#experts">💬 Talk to Expert</a>
+<a href="#consultancy">💼 Consultancy</a>
+<a href="#gallery">📸 Gallery</a>
+<a href="#resources">📚 Resources</a>
+</div>
 </div>
 
 <!-- CONTACT ON HOME -->
@@ -1848,7 +1768,7 @@ WhatsApp
 
 <!-- CONSULTANCY -->
 
-<section id="consultancy" class="tab-section">
+<section id="consultancy" class="tab-section"consultancy"">
 
 <div class="container">
 
