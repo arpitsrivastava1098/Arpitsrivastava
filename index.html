@@ -508,6 +508,94 @@ display:block;
 transition:.7s;
 }
 
+/* VIDEO SECTION */
+
+.video-wrap{
+margin-top:35px;
+max-width:800px;
+}
+
+.video-card{
+position:relative;
+display:block;
+border-radius:14px;
+overflow:hidden;
+border:1px solid rgba(217,164,65,.3);
+background:#111;
+box-shadow:0 20px 45px rgba(0,0,0,.4);
+transition:.4s;
+}
+
+.video-card:hover{
+transform:translateY(-6px);
+border-color:#d9a441;
+box-shadow:0 25px 55px rgba(217,164,65,.15);
+}
+
+.video-thumb{
+position:relative;
+width:100%;
+aspect-ratio:16/9;
+overflow:hidden;
+}
+
+.video-thumb img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+transition:.5s;
+}
+
+.video-card:hover .video-thumb img{
+transform:scale(1.05);
+}
+
+.play-btn{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:76px;
+height:76px;
+border-radius:50%;
+background:rgba(217,164,65,.95);
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 0 30px rgba(0,0,0,.5);
+transition:.3s;
+}
+
+.video-card:hover .play-btn{
+background:#efc66e;
+transform:translate(-50%,-50%) scale(1.1);
+}
+
+.play-btn:before{
+content:"";
+border-style:solid;
+border-width:14px 0 14px 22px;
+border-color:transparent transparent transparent #111;
+margin-left:5px;
+}
+
+.video-caption{
+padding:18px 20px;
+background:linear-gradient(145deg,#151a1d,#0e1214);
+}
+
+.video-caption h3{
+font-size:17px;
+color:#f0c76b;
+margin-bottom:4px;
+}
+
+.video-caption p{
+color:#aaa;
+font-size:13px;
+}
+
 .gallery-item:hover img{
 transform:scale(1.1);
 filter:brightness(1.1);
@@ -2237,6 +2325,29 @@ and field activities.
 <div class="gallery-item reveal">
 <img src="arpit.jpeg" alt="Arpit Srivastava activity">
 </div>
+
+</div>
+
+</div>
+
+<div class="video-wrap reveal">
+
+<a class="video-card"
+href="https://youtu.be/H98eOhQuULk"
+target="_blank"
+rel="noopener">
+
+<div class="video-thumb">
+<img src="https://img.youtube.com/vi/H98eOhQuULk/maxresdefault.jpg" alt="Video Thumbnail">
+<div class="play-btn"></div>
+</div>
+
+<div class="video-caption">
+<h3>Watch on YouTube</h3>
+<p>Click to play the video directly on YouTube.</p>
+</div>
+
+</a>
 
 </div>
 
