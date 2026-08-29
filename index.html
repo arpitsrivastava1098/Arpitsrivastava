@@ -761,7 +761,52 @@ section.active{
 @media(max-width:1000px){
 
 .nav-links{
-display:none;
+    display:flex;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:rgba(8,11,13,.98);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.12);
+    padding:12px 4%;
+    gap:8px;
+    flex-direction:column;
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    pointer-events:none;
+    transition:max-height:.35s ease, opacity:.25s ease;
+}
+
+nav.mobile-open .nav-links{
+    max-height:420px;
+    opacity:1;
+    pointer-events:auto;
+}
+
+.nav-links a{
+    display:block;
+    width:100%;
+    padding:12px 14px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:8px;
+    background:#111619;
+    font-size:14px;
+}
+
+.nav-toggle{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:44px;
+    height:44px;
+    border:1px solid rgba(217,164,65,.55);
+    border-radius:8px;
+    background:#111619;
+    color:#e9bd5e;
+    font-size:23px;
+    cursor:pointer;
 }
 
 .hero-grid{
@@ -833,6 +878,61 @@ h1{
 letter-spacing:-2px;
 }
 
+}
+
+/* HOME TAB MENU */
+.home-tab-menu{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:42px;
+}
+
+.home-tab-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:58px;
+  padding:14px 16px;
+  border:1px solid rgba(217,164,65,.35);
+  border-radius:10px;
+  background:linear-gradient(145deg,#151a1d,#0e1214);
+  color:#f5f5f5;
+  font-weight:700;
+  text-align:center;
+  transition:.3s;
+}
+
+.home-tab-btn:hover{
+  transform:translateY(-4px);
+  border-color:#d9a441;
+  color:#e9bd5e;
+  box-shadow:0 12px 28px rgba(0,0,0,.3);
+}
+
+.home-tab-title{
+  margin-top:48px;
+  color:#e9bd5e;
+  font-size:18px;
+  font-weight:700;
+  text-align:center;
+}
+
+@media(max-width:560px){
+  .home-tab-menu{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:30px;
+  }
+  .home-tab-btn{
+    min-height:54px;
+    padding:12px 8px;
+    font-size:13px;
+  }
+  .home-tab-title{
+    margin-top:35px;
+    font-size:16px;
+  }
 }
 
 /* FLOATING WHATSAPP */
@@ -912,6 +1012,8 @@ transform:scale(1.08);
 ARPIT <span>SRIVASTAVA</span>
 </a>
 
+<button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+
 <div class="nav-links">
 
 <a href="#top">Home</a>
@@ -950,6 +1052,15 @@ Strengthening Child Protection Across India
 Welcome to India's first platform built entirely around child protection — a space to learn, read practical modules, talk directly to sector experts, and access consultancy support for training, programme management and government systems strengthening. Backed by over a decade of on-ground experience working with government departments, frontline workers and communities across India, this platform brings field-tested knowledge and practical solutions directly to those who need them — social workers, government functionaries, NGOs, students and researchers, and anyone committed to child rights and safety. Alongside child protection, the platform also brings together the allied areas that shape a child's wellbeing — Livelihood, Education, Skill Development, Girls' Empowerment, Health & Nutrition, and Monitoring, Evaluation & Learning (MEL) — with dedicated consultancy support available for organisations and institutions working across the social development sector. Whether you're looking to strengthen your understanding of child protection laws and mechanisms, build the capacity of your team, or partner on a programme, this platform is designed to be your trusted starting point.
 
 </p>
+
+<div class="home-tab-title">Explore the Platform</div>
+<div class="home-tab-menu">
+  <a class="home-tab-btn" href="#about">About Me</a>
+  <a class="home-tab-btn" href="#experts">Talk to Expert</a>
+  <a class="home-tab-btn" href="#consultancy">Consultancy</a>
+  <a class="home-tab-btn" href="#gallery">Gallery</a>
+  <a class="home-tab-btn" href="#resources">Resources</a>
+</div>
 
 <div class="buttons">
 
@@ -2164,8 +2275,18 @@ title="Chat on WhatsApp">
 
 <script>
 
+/* MOBILE NAVIGATION */
+const nav=document.querySelector("nav");
+const navToggle=document.querySelector(".nav-toggle");
+
+navToggle.addEventListener("click",()=>{
+  const open=nav.classList.toggle("mobile-open");
+  navToggle.setAttribute("aria-expanded",open ? "true" : "false");
+  navToggle.textContent=open ? "×" : "☰";
+});
+
 /* SINGLE-PAGE TAB NAVIGATION */
-const tabLinks=document.querySelectorAll('.nav-links a, .hero a[href^="#"]');
+const tabLinks=document.querySelectorAll('.nav-links a, .hero a[href^="#"], .home-tab-menu a[href^="#"]');
 const hero=document.getElementById('top');
 const tabSections=document.querySelectorAll('section.tab-section');
 
@@ -2195,6 +2316,9 @@ tabLinks.forEach(link=>{
     if(!href || !href.startsWith('#')) return;
     e.preventDefault();
     showTab(href.substring(1));
+    nav.classList.remove("mobile-open");
+    navToggle.setAttribute("aria-expanded","false");
+    navToggle.textContent="☰";
   });
 });
 
