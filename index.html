@@ -866,16 +866,29 @@ transform:scale(1.08);
 }
 
 
-/* POOJA PHOTO RESPONSIVE */
+/* POOJA PHOTO - FACE FULLY VISIBLE */
+.expert-card[data-expertise="child"] .expert-photo{
+width:160px;
+height:225px;
+margin:25px auto 0;
+overflow:hidden;
+display:flex;
+align-items:flex-start;
+justify-content:center;
+}
+
 .expert-card[data-expertise="child"] .expert-photo img{
 width:100%;
-height:260px;
-object-fit:cover;
+height:100%;
+object-fit:contain;
+object-position:center top;
 display:block;
 }
+
 @media(max-width:650px){
-.expert-card[data-expertise="child"] .expert-photo img{
-height:230px;
+.expert-card[data-expertise="child"] .expert-photo{
+width:140px;
+height:205px;
 }
 }
 
