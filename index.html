@@ -880,6 +880,55 @@ transform:scale(1.08);
 @media(max-width:1000px){.nav-inner{position:relative}.nav-toggle{display:flex}.nav-links{display:flex;position:absolute;top:70px;left:0;width:100%;flex-direction:column;gap:7px;padding:12px 4%;background:rgba(8,11,13,.98);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.12);max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:max-height .35s ease,opacity .25s ease}.nav.mobile-open .nav-links{max-height:430px;opacity:1;pointer-events:auto}.nav-links a{width:100%;padding:11px 14px;border:1px solid rgba(255,255,255,.08);border-radius:8px;background:#111619;font-size:14px}}
 @media(max-width:560px){.home-overview{padding:18px;margin:22px 0}.home-overview h3{font-size:18px}.home-overview p{font-size:13px}.home-stat-strip{grid-template-columns:repeat(2,1fr)}.home-explore{grid-template-columns:repeat(2,1fr)}.home-explore a{min-height:55px;font-size:12px}}
 
+
+/* MOBILE MENU FIX */
+.nav-toggle{
+  display:none !important;
+  width:44px !important;height:44px !important;
+  border:1px solid #d9a441 !important;border-radius:9px !important;
+  background:#111619 !important;color:#e9bd5e !important;
+  font-size:24px !important;line-height:1 !important;
+  align-items:center !important;justify-content:center !important;
+  cursor:pointer !important;padding:0 !important;
+}
+@media (max-width:1000px){
+  nav .nav-inner{
+    position:relative !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+  }
+  nav .nav-toggle{display:flex !important;flex-shrink:0 !important;}
+  nav .nav-links{
+    position:absolute !important;
+    z-index:9999 !important;
+    top:calc(100% + 10px) !important;
+    left:0 !important;right:0 !important;width:auto !important;
+    display:flex !important;flex-direction:column !important;
+    gap:7px !important;padding:12px !important;
+    background:#0b0f11 !important;
+    border:1px solid rgba(217,164,65,.35) !important;
+    border-radius:12px !important;
+    box-shadow:0 18px 40px rgba(0,0,0,.5) !important;
+    max-height:0 !important;overflow:hidden !important;
+    opacity:0 !important;visibility:hidden !important;
+    pointer-events:none !important;
+    transition:max-height .3s ease,opacity .2s ease,visibility .2s ease !important;
+  }
+  nav.mobile-open .nav-links{
+    max-height:500px !important;opacity:1 !important;
+    visibility:visible !important;pointer-events:auto !important;
+  }
+  nav .nav-links a{
+    display:block !important;width:100% !important;
+    padding:13px 15px !important;
+    border:1px solid rgba(255,255,255,.09) !important;
+    border-radius:8px !important;background:#111619 !important;
+    color:#eee !important;text-decoration:none !important;
+  }
+  nav .nav-links a:hover{color:#e9bd5e !important;border-color:#d9a441 !important;}
+}
+
 </style>
 
 <style id="home-text-animation">
@@ -2250,11 +2299,6 @@ tabLinks.forEach(link=>{
   });
 });
 
-navToggle.addEventListener("click",()=>{
-  const open=nav.classList.toggle("mobile-open");
-  navToggle.setAttribute("aria-expanded",open ? "true" : "false");
-  navToggle.textContent=open ? "×" : "☰";
-});
 
 const initialHash=window.location.hash.replace('#','');
 showTab(initialHash || 'top', false);
@@ -2364,6 +2408,38 @@ window.open(
 "_blank"
 );
 
+}
+
+
+/* ROBUST MOBILE MENU */
+const mobileNav = document.querySelector("nav");
+const mobileToggle = document.querySelector(".nav-toggle");
+
+if (mobileNav && mobileToggle) {
+  mobileToggle.addEventListener("click", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    const opened = mobileNav.classList.toggle("mobile-open");
+    mobileToggle.setAttribute("aria-expanded", opened ? "true" : "false");
+    mobileToggle.setAttribute("aria-label", opened ? "Close navigation" : "Open navigation");
+    mobileToggle.textContent = opened ? "×" : "☰";
+  });
+
+  document.addEventListener("click", function(e){
+    if (!mobileNav.contains(e.target)) {
+      mobileNav.classList.remove("mobile-open");
+      mobileToggle.setAttribute("aria-expanded","false");
+      mobileToggle.textContent="☰";
+    }
+  });
+
+  mobileNav.querySelectorAll(".nav-links a").forEach(function(link){
+    link.addEventListener("click", function(){
+      mobileNav.classList.remove("mobile-open");
+      mobileToggle.setAttribute("aria-expanded","false");
+      mobileToggle.textContent="☰";
+    });
+  });
 }
 
 </script>
