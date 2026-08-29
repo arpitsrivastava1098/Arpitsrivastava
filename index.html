@@ -811,6 +811,86 @@ transform:translateY(0);
 animation:flashGlow 2.5s infinite;
 }
 
+/* TEXT ANIMATIONS */
+
+h1 span,
+.logo span{
+background:linear-gradient(90deg,#d9a441,#f8e0a0,#d9a441,#f8e0a0);
+background-size:300% auto;
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+animation:shimmer 4s linear infinite;
+}
+
+@keyframes shimmer{
+0%{
+background-position:0% 50%;
+}
+100%{
+background-position:300% 50%;
+}
+}
+
+h2{
+position:relative;
+display:inline-block;
+}
+
+h2:after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+height:3px;
+width:0;
+background:linear-gradient(90deg,#d9a441,#f8e0a0);
+border-radius:3px;
+transition:width 1s ease .1s;
+}
+
+.reveal.show h2:after{
+width:70px;
+}
+
+.kicker,
+.eyebrow{
+display:inline-block;
+position:relative;
+animation:eyebrowIn .8s ease both;
+}
+
+@keyframes eyebrowIn{
+0%{
+opacity:0;
+letter-spacing:8px;
+}
+100%{
+opacity:1;
+letter-spacing:2px;
+}
+}
+
+.hero-title{
+animation:fadeSlideIn 1s ease .2s both;
+}
+
+.hero-copy,
+.lead{
+animation:fadeSlideIn 1s ease .35s both;
+}
+
+@keyframes fadeSlideIn{
+0%{
+opacity:0;
+transform:translateY(15px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+
 @keyframes flashGlow{
 0%,100%{
 box-shadow:0 0 0 rgba(217,164,65,0);
@@ -965,6 +1045,14 @@ height:165px;
 
 h1{
 letter-spacing:-2px;
+}
+
+.floating-whatsapp{
+width:48px;
+height:48px;
+font-size:22px;
+right:14px;
+bottom:14px;
 }
 
 }
