@@ -761,52 +761,7 @@ section.active{
 @media(max-width:1000px){
 
 .nav-links{
-    display:flex;
-    position:absolute;
-    top:70px;
-    left:0;
-    width:100%;
-    background:rgba(8,11,13,.98);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(255,255,255,.12);
-    padding:12px 4%;
-    gap:8px;
-    flex-direction:column;
-    max-height:0;
-    overflow:hidden;
-    opacity:0;
-    pointer-events:none;
-    transition:max-height:.35s ease, opacity:.25s ease;
-}
-
-nav.mobile-open .nav-links{
-    max-height:420px;
-    opacity:1;
-    pointer-events:auto;
-}
-
-.nav-links a{
-    display:block;
-    width:100%;
-    padding:12px 14px;
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:8px;
-    background:#111619;
-    font-size:14px;
-}
-
-.nav-toggle{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:44px;
-    height:44px;
-    border:1px solid rgba(217,164,65,.55);
-    border-radius:8px;
-    background:#111619;
-    color:#e9bd5e;
-    font-size:23px;
-    cursor:pointer;
+display:none;
 }
 
 .hero-grid{
@@ -880,61 +835,6 @@ letter-spacing:-2px;
 
 }
 
-/* HOME TAB MENU */
-.home-tab-menu{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-  margin-top:42px;
-}
-
-.home-tab-btn{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:58px;
-  padding:14px 16px;
-  border:1px solid rgba(217,164,65,.35);
-  border-radius:10px;
-  background:linear-gradient(145deg,#151a1d,#0e1214);
-  color:#f5f5f5;
-  font-weight:700;
-  text-align:center;
-  transition:.3s;
-}
-
-.home-tab-btn:hover{
-  transform:translateY(-4px);
-  border-color:#d9a441;
-  color:#e9bd5e;
-  box-shadow:0 12px 28px rgba(0,0,0,.3);
-}
-
-.home-tab-title{
-  margin-top:48px;
-  color:#e9bd5e;
-  font-size:18px;
-  font-weight:700;
-  text-align:center;
-}
-
-@media(max-width:560px){
-  .home-tab-menu{
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-    margin-top:30px;
-  }
-  .home-tab-btn{
-    min-height:54px;
-    padding:12px 8px;
-    font-size:13px;
-  }
-  .home-tab-title{
-    margin-top:35px;
-    font-size:16px;
-  }
-}
-
 /* FLOATING WHATSAPP */
 
 .floating-whatsapp{
@@ -963,6 +863,102 @@ transform:scale(1);
 50%{
 transform:scale(1.08);
 }
+}
+
+
+/* ===== MOBILE NAV + COMPACT HOME OVERVIEW ===== */
+.nav-toggle{
+  display:none;
+  width:44px;height:44px;border:1px solid rgba(217,164,65,.55);
+  border-radius:9px;background:#111619;color:#e9bd5e;
+  font-size:23px;cursor:pointer;align-items:center;justify-content:center;
+}
+
+.home-overview{
+  margin-top:30px;
+  padding:22px;
+  border:1px solid rgba(217,164,65,.25);
+  border-radius:16px;
+  background:linear-gradient(145deg,rgba(21,26,29,.94),rgba(14,18,20,.94));
+  box-shadow:0 18px 45px rgba(0,0,0,.22);
+  position:relative;
+  overflow:hidden;
+}
+.home-overview:before{
+  content:"";
+  position:absolute;inset:-2px;
+  background:linear-gradient(90deg,transparent,rgba(217,164,65,.14),transparent);
+  transform:translateX(-100%);
+  animation:homeSweep 4s infinite;
+}
+@keyframes homeSweep{to{transform:translateX(100%)}}
+.home-overview > *{position:relative;z-index:1}
+.home-overview h3{color:#e9bd5e;font-size:20px;margin-bottom:7px}
+.home-overview p{color:#aaa;font-size:14px}
+.home-pills{
+  display:flex;flex-wrap:wrap;gap:8px;margin-top:15px;
+}
+.home-pill{
+  border:1px solid rgba(217,164,65,.28);
+  border-radius:999px;padding:7px 11px;
+  color:#ddd;background:#0c1113;font-size:12px;
+  animation:pillFloat 3.5s ease-in-out infinite;
+}
+.home-pill:nth-child(2){animation-delay:.3s}.home-pill:nth-child(3){animation-delay:.6s}
+.home-pill:nth-child(4){animation-delay:.9s}.home-pill:nth-child(5){animation-delay:1.2s}
+.home-pill:nth-child(6){animation-delay:1.5s}
+@keyframes pillFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+
+.home-stat-strip{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px;
+}
+.home-mini-stat{
+  padding:13px 8px;text-align:center;border-radius:10px;
+  background:#0b0f11;border:1px solid rgba(255,255,255,.08);
+}
+.home-mini-stat strong{display:block;color:#e9bd5e;font-size:21px}
+.home-mini-stat span{display:block;color:#999;font-size:10px;text-transform:uppercase}
+
+.home-explore-title{
+  text-align:center;margin:34px 0 14px;color:#e9bd5e;
+  font-size:18px;font-weight:700;
+}
+.home-explore{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:11px;
+}
+.home-explore a{
+  min-height:60px;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:12px;border-radius:10px;
+  border:1px solid rgba(217,164,65,.3);
+  background:linear-gradient(145deg,#151a1d,#0e1214);
+  font-weight:700;font-size:13px;transition:.3s;
+}
+.home-explore a:hover{transform:translateY(-4px);border-color:#d9a441;color:#e9bd5e}
+
+@media(max-width:1000px){
+  .nav-inner{position:relative}
+  .nav-toggle{display:flex}
+  .nav-links{
+    display:flex;position:absolute;top:70px;left:0;width:100%;
+    flex-direction:column;gap:7px;padding:12px 4%;
+    background:rgba(8,11,13,.98);backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.12);
+    max-height:0;overflow:hidden;opacity:0;pointer-events:none;
+    transition:max-height .35s ease,opacity .25s ease;
+  }
+  nav.mobile-open .nav-links{max-height:430px;opacity:1;pointer-events:auto}
+  .nav-links a{
+    width:100%;padding:11px 14px;border:1px solid rgba(255,255,255,.08);
+    border-radius:8px;background:#111619;font-size:14px;
+  }
+}
+@media(max-width:560px){
+  .home-overview{padding:18px;margin-top:22px}
+  .home-overview h3{font-size:18px}
+  .home-overview p{font-size:13px}
+  .home-stat-strip{grid-template-columns:repeat(2,1fr)}
+  .home-explore{grid-template-columns:repeat(2,1fr)}
+  .home-explore a{min-height:55px;font-size:12px}
 }
 
 </style>
@@ -1012,7 +1008,7 @@ transform:scale(1.08);
 ARPIT <span>SRIVASTAVA</span>
 </a>
 
-<button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
 
 <div class="nav-links">
 
@@ -1049,17 +1045,37 @@ Strengthening Child Protection Across India
 
 <p class="hero-copy">
 
-Welcome to India's first platform built entirely around child protection — a space to learn, read practical modules, talk directly to sector experts, and access consultancy support for training, programme management and government systems strengthening. Backed by over a decade of on-ground experience working with government departments, frontline workers and communities across India, this platform brings field-tested knowledge and practical solutions directly to those who need them — social workers, government functionaries, NGOs, students and researchers, and anyone committed to child rights and safety. Alongside child protection, the platform also brings together the allied areas that shape a child's wellbeing — Livelihood, Education, Skill Development, Girls' Empowerment, Health & Nutrition, and Monitoring, Evaluation & Learning (MEL) — with dedicated consultancy support available for organisations and institutions working across the social development sector. Whether you're looking to strengthen your understanding of child protection laws and mechanisms, build the capacity of your team, or partner on a programme, this platform is designed to be your trusted starting point.
+India's first platform built entirely around child protection — bringing practical knowledge, expert support, training resources and professional consultancy together in one place.
 
 </p>
 
-<div class="home-tab-title">Explore the Platform</div>
-<div class="home-tab-menu">
-  <a class="home-tab-btn" href="#about">About Me</a>
-  <a class="home-tab-btn" href="#experts">Talk to Expert</a>
-  <a class="home-tab-btn" href="#consultancy">Consultancy</a>
-  <a class="home-tab-btn" href="#gallery">Gallery</a>
-  <a class="home-tab-btn" href="#resources">Resources</a>
+
+<div class="home-overview reveal">
+  <h3>What You’ll Find Here</h3>
+  <p>Explore child protection resources, expert consultation, professional services, field work, training modules and practical development knowledge.</p>
+  <div class="home-pills">
+    <span class="home-pill">🛡️ Child Protection</span>
+    <span class="home-pill">👥 Talk to Experts</span>
+    <span class="home-pill">🎓 Training & Capacity Building</span>
+    <span class="home-pill">📊 Data & MIS</span>
+    <span class="home-pill">🏛️ Government Systems</span>
+    <span class="home-pill">📚 Modules & Resources</span>
+  </div>
+  <div class="home-stat-strip">
+    <div class="home-mini-stat"><strong>10+</strong><span>Years Experience</span></div>
+    <div class="home-mini-stat"><strong>500+</strong><span>Trainings</span></div>
+    <div class="home-mini-stat"><strong>10K+</strong><span>People Trained</span></div>
+    <div class="home-mini-stat"><strong>100+</strong><span>Govt. Circulars</span></div>
+  </div>
+</div>
+
+<div class="home-explore-title">Explore the Website</div>
+<div class="home-explore">
+  <a href="#about">👤 About Me</a>
+  <a href="#experts">💬 Talk to Expert</a>
+  <a href="#consultancy">💼 Consultancy</a>
+  <a href="#gallery">📸 Gallery</a>
+  <a href="#resources">📚 Resources</a>
 </div>
 
 <div class="buttons">
@@ -1832,7 +1848,7 @@ WhatsApp
 
 <!-- CONSULTANCY -->
 
-<section id="consultancy" class="tab-section"consultancy"">
+<section id="consultancy" class="tab-section">
 
 <div class="container">
 
@@ -2275,18 +2291,10 @@ title="Chat on WhatsApp">
 
 <script>
 
-/* MOBILE NAVIGATION */
+/* SINGLE-PAGE TAB NAVIGATION */
+const tabLinks=document.querySelectorAll('.nav-links a, .hero a[href^="#"], .home-explore a[href^="#"]');
 const nav=document.querySelector("nav");
 const navToggle=document.querySelector(".nav-toggle");
-
-navToggle.addEventListener("click",()=>{
-  const open=nav.classList.toggle("mobile-open");
-  navToggle.setAttribute("aria-expanded",open ? "true" : "false");
-  navToggle.textContent=open ? "×" : "☰";
-});
-
-/* SINGLE-PAGE TAB NAVIGATION */
-const tabLinks=document.querySelectorAll('.nav-links a, .hero a[href^="#"], .home-tab-menu a[href^="#"]');
 const hero=document.getElementById('top');
 const tabSections=document.querySelectorAll('section.tab-section');
 
@@ -2320,6 +2328,12 @@ tabLinks.forEach(link=>{
     navToggle.setAttribute("aria-expanded","false");
     navToggle.textContent="☰";
   });
+});
+
+navToggle.addEventListener("click",()=>{
+  const open=nav.classList.toggle("mobile-open");
+  navToggle.setAttribute("aria-expanded",open ? "true" : "false");
+  navToggle.textContent=open ? "×" : "☰";
 });
 
 const initialHash=window.location.hash.replace('#','');
